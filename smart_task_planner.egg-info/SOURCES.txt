@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+smart_task_planner.egg-info/PKG-INFO
+smart_task_planner.egg-info/SOURCES.txt
+smart_task_planner.egg-info/dependency_links.txt
+smart_task_planner.egg-info/top_level.txt
