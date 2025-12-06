@@ -1,0 +1,14 @@
+{"available_keys": ["GROQ_API_KEY", "GOOGLE_API_KEY"], "timestamp": "2025-12-06T08:09:02.059159Z", "level": "Environment variables validated successfully"}
+{"config_keys": ["llm"], "timestamp": "2025-12-06T08:09:02.061581Z", "level": "Configurations loaded successfully"}
+{"timestamp": "2025-12-06T08:09:02.062212Z", "level": "Loading LLM"}
+{"provider": "google", "model": "gemini-2.0-flash", "temperature": 0.0, "max_tokens": 2048, "timestamp": "2025-12-06T08:09:02.062551Z", "level": "Loading LLM"}
+{"timestamp": "2025-12-06T08:09:02.093754Z", "level": "Prompt for task reasoning generated."}
+{"timestamp": "2025-12-06T08:09:13.708436Z", "level": "Task reasoning completed successfully."}
+{"timestamp": "2025-12-06T08:09:13.722157Z", "level": "Initializing PERTScheduler..."}
+{"timestamp": "2025-12-06T08:09:13.722732Z", "level": "Performing topological sort..."}
+{"timestamp": "2025-12-06T08:09:13.723014Z", "level": "Topological sort completed: ['T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'T8']"}
+{"timestamp": "2025-12-06T08:09:13.723364Z", "level": "PERTScheduler initialized successfully."}
+{"timestamp": "2025-12-06T08:09:13.723873Z", "level": "Running PERTScheduler..."}
+{"timestamp": "2025-12-06T08:09:13.724364Z", "level": "Computing forward pass..."}
+{"timestamp": "2025-12-06T08:09:13.725648Z", "level": "Forward pass error: 'DurationEstimate' object has no attribute 'working_days'"}
+{"timestamp": "2025-12-06T08:09:13.728238Z", "level": "Scheduler run failure: Error in [D:\\Project\\Smart-Task-Planner\\src\\scheduler.py] at line [104]\nMessage:Forward pass error: 'DurationEstimate' object has no attribute 'working_days'\nTraceback:Traceback (most recent call last):\n  File \"D:\\Project\\Smart-Task-Planner\\src\\scheduler.py\", line 104, in compute_forward_pass\n    duration = t.duration_days.working_days()\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Project\\Smart-Task-Planner\\smartTask\\Lib\\site-packages\\pydantic\\main.py\", line 1026, in __getattr__\n    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')\nAttributeError: 'DurationEstimate' object has no attribute 'working_days'\n"}

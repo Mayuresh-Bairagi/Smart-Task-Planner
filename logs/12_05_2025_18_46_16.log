@@ -1,0 +1,2 @@
+{"user_id": 123, "filename": "report.csv", "timestamp": "2025-12-05T13:16:16.910765Z", "level": "User uploaded a file"}
+{"error": "File not found", "user_id": 123, "timestamp": "2025-12-05T13:16:16.911407Z", "level": "Failed to process CSV"}

@@ -1,0 +1,20 @@
+{"available_keys": ["GROQ_API_KEY", "GOOGLE_API_KEY"], "timestamp": "2025-12-06T08:11:07.641537Z", "level": "Environment variables validated successfully"}
+{"config_keys": ["llm"], "timestamp": "2025-12-06T08:11:07.642984Z", "level": "Configurations loaded successfully"}
+{"timestamp": "2025-12-06T08:11:07.643283Z", "level": "Loading LLM"}
+{"provider": "google", "model": "gemini-2.0-flash", "temperature": 0.0, "max_tokens": 2048, "timestamp": "2025-12-06T08:11:07.643507Z", "level": "Loading LLM"}
+{"timestamp": "2025-12-06T08:11:07.666070Z", "level": "Prompt for task reasoning generated."}
+{"timestamp": "2025-12-06T08:11:19.004602Z", "level": "Task reasoning completed successfully."}
+{"timestamp": "2025-12-06T08:11:19.019346Z", "level": "Initializing PERTScheduler..."}
+{"timestamp": "2025-12-06T08:11:19.022762Z", "level": "Performing topological sort..."}
+{"timestamp": "2025-12-06T08:11:19.023095Z", "level": "Topological sort completed: ['T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'T8']"}
+{"timestamp": "2025-12-06T08:11:19.023284Z", "level": "PERTScheduler initialized successfully."}
+{"timestamp": "2025-12-06T08:11:19.024890Z", "level": "Running PERTScheduler..."}
+{"timestamp": "2025-12-06T08:11:19.025563Z", "level": "Computing forward pass..."}
+{"timestamp": "2025-12-06T08:11:19.025938Z", "level": "Forward pass completed."}
+{"timestamp": "2025-12-06T08:11:19.026150Z", "level": "Computing backward pass..."}
+{"timestamp": "2025-12-06T08:11:19.026373Z", "level": "Backward pass completed."}
+{"timestamp": "2025-12-06T08:11:19.026521Z", "level": "Converting offsets to calendar dates..."}
+{"timestamp": "2025-12-06T08:11:19.026825Z", "level": "Calendar mapping completed."}
+{"timestamp": "2025-12-06T08:11:19.028790Z", "level": "Running Monte Carlo simulation..."}
+{"timestamp": "2025-12-06T08:11:19.116745Z", "level": "Monte Carlo simulation completed."}
+{"timestamp": "2025-12-06T08:11:19.117102Z", "level": "PERTScheduler completed successfully."}

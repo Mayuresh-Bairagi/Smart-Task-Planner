@@ -1,0 +1,6 @@
+{"available_keys": ["GROQ_API_KEY", "GOOGLE_API_KEY"], "timestamp": "2025-12-05T19:41:42.031865Z", "level": "Environment variables validated successfully"}
+{"config_keys": ["llm"], "timestamp": "2025-12-05T19:41:42.034563Z", "level": "Configurations loaded successfully"}
+{"timestamp": "2025-12-05T19:41:42.035052Z", "level": "Loading LLM"}
+{"provider": "google", "model": "gemini-2.0-flash", "temperature": 0.0, "max_tokens": 2048, "timestamp": "2025-12-05T19:41:42.035506Z", "level": "Loading LLM"}
+{"timestamp": "2025-12-05T19:41:42.080376Z", "level": "Prompt for task reasoning generated."}
+{"timestamp": "2025-12-05T19:41:53.536164Z", "level": "Task reasoning completed successfully."}
