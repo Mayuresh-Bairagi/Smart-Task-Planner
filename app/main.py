@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import Optional, List
+from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 from logger.customlogger import CustomLogger
 from expection.customExpection import smartTaskPlannerException
@@ -9,6 +10,12 @@ from model.model import CreatePlanRequest, CreatePlanResponse, NegotiateRequest
 
 logger = CustomLogger().get_logger(__file__)
 app = FastAPI(title="Smart Task Planner API")
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_headers=["*"],
+    allow_methods=["*"],
+)
 
 orch = Orchestrator()
 
@@ -37,16 +44,30 @@ def get_plan(plan_id: str):
         plan = orch.get_plan(plan_id)
         if not plan:
             raise HTTPException(status_code=404, detail="Plan not found")
+
+        scheduler = plan["scheduler_output"]
         return {
             "plan_id": plan_id,
             "goal": plan["goal"],
             "constraints": plan["constraints"],
-            "critical_path": plan["scheduler_output"].critical_path,
-            "project_start": plan["scheduler_output"].project_start.isoformat(),
-            "project_end": plan["scheduler_output"].project_end.isoformat(),
-            "expected_days": plan["scheduler_output"].expected_calendar_days,
-            "monte_carlo": plan["scheduler_output"].monte_carlo
+            "critical_path": scheduler.critical_path,
+            "project_start": scheduler.project_start.isoformat(),
+            "project_end": scheduler.project_end.isoformat(),
+            "expected_days": scheduler.expected_calendar_days,
+            "monte_carlo": scheduler.monte_carlo,
+            "schedules": [
+                {
+                    "id": s.id,
+                    "title": s.title,
+                    "start": s.start.isoformat(),
+                    "end": s.end.isoformat(),
+                    "slack": s.slack,
+                    "critical": s.critical,
+                }
+                for s in scheduler.schedules
+            ],
         }
+
     except smartTaskPlannerException as e:
         logger.error(f"Get plan failed: {e}")
         raise HTTPException(status_code=400, detail=str(e))
@@ -72,17 +93,28 @@ def get_gantt_data(plan_id: str):
         raise HTTPException(status_code=404, detail="Plan not found")
 
     sched = plan["scheduler_output"].schedules
+    task_map = plan.get("task_map", {})
+
+    # Original task data (dicts returned by TaskReasoner)
+    original_tasks = {t["id"]: t for t in plan["task_output"]["tasks"]}
 
     gantt_data = []
     for t in sched:
+        raw = original_tasks.get(t.id, {})
+
         gantt_data.append({
             "id": t.id,
             "name": t.title,
+            "description": raw.get("description"),
+            "rationale": raw.get("rationale"),
+            "assumptions": raw.get("assumptions"),
+            "risks": raw.get("risks"),
+            "confidence": raw.get("confidence"),
             "start": t.start.isoformat(),
             "end": t.end.isoformat(),
             "progress": 0,
-            "dependencies": plan["task_output"].tasks_dict.get(t.id, {}).get("dependencies", []),
-            "custom_class": "critical" if t.critical else "normal"
+            "dependencies": task_map.get(t.id, []),
+            "custom_class": "critical" if t.critical else "normal",
         })
 
     return {"tasks": gantt_data}

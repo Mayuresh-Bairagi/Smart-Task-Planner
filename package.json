@@ -1,0 +1,16 @@
+{
+  "devDependencies": {
+    "autoprefixer": "^10.4.22",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.17"
+  },
+  "dependencies": {
+    "@syncfusion/ej2-react-gantt": "^31.2.15",
+    "@tailwindcss/vite": "^4.1.17",
+    "date-fn": "^0.0.2",
+    "date-fns": "^4.1.0",
+    "fullcalendar": "^6.1.19",
+    "react-big-calendar": "^1.19.4",
+    "react-fullcalendar": "^1.0.0"
+  }
+}

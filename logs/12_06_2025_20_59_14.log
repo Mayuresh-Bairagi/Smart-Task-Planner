@@ -1,0 +1,63 @@
+{"available_keys": ["GROQ_API_KEY", "GOOGLE_API_KEY"], "timestamp": "2025-12-06T15:29:14.443102Z", "level": "Environment variables validated successfully"}
+{"config_keys": ["llm"], "timestamp": "2025-12-06T15:29:14.444462Z", "level": "Configurations loaded successfully"}
+{"timestamp": "2025-12-06T15:29:14.444743Z", "level": "Loading LLM"}
+{"provider": "google", "model": "gemini-2.0-flash", "temperature": 0.0, "max_tokens": 2048, "timestamp": "2025-12-06T15:29:14.444911Z", "level": "Loading LLM"}
+{"timestamp": "2025-12-06T15:29:14.511170Z", "level": "NegotiationEngine initialized."}
+{"timestamp": "2025-12-06T15:29:14.511392Z", "level": "Orchestrator initialized."}
+{"timestamp": "2025-12-06T15:29:44.507611Z", "level": "Running TaskReasoning for goal."}
+{"timestamp": "2025-12-06T15:29:44.516190Z", "level": "Prompt for task reasoning generated."}
+{"timestamp": "2025-12-06T15:29:55.845696Z", "level": "Task reasoning completed successfully."}
+{"timestamp": "2025-12-06T15:29:55.846571Z", "level": "Running PERTScheduler."}
+{"timestamp": "2025-12-06T15:29:55.848712Z", "level": "Initializing PERTScheduler..."}
+{"timestamp": "2025-12-06T15:29:55.849347Z", "level": "Performing topological sort..."}
+{"timestamp": "2025-12-06T15:29:55.850141Z", "level": "Topological sort completed: ['T1', 'T3', 'T2', 'T4', 'T5', 'T6', 'T7', 'T8']"}
+{"timestamp": "2025-12-06T15:29:55.850637Z", "level": "PERTScheduler initialized successfully."}
+{"timestamp": "2025-12-06T15:29:55.851205Z", "level": "Running PERTScheduler..."}
+{"timestamp": "2025-12-06T15:29:55.851619Z", "level": "Computing forward pass..."}
+{"timestamp": "2025-12-06T15:29:55.852229Z", "level": "Forward pass completed."}
+{"timestamp": "2025-12-06T15:29:55.854269Z", "level": "Computing backward pass..."}
+{"timestamp": "2025-12-06T15:29:55.855039Z", "level": "Backward pass completed."}
+{"timestamp": "2025-12-06T15:29:55.855641Z", "level": "Converting offsets to calendar dates..."}
+{"timestamp": "2025-12-06T15:29:55.856379Z", "level": "Calendar mapping completed."}
+{"timestamp": "2025-12-06T15:29:55.857109Z", "level": "Running Monte Carlo simulation..."}
+{"timestamp": "2025-12-06T15:29:56.003741Z", "level": "Monte Carlo simulation completed."}
+{"timestamp": "2025-12-06T15:29:56.004268Z", "level": "PERTScheduler completed successfully."}
+{"timestamp": "2025-12-06T15:29:56.004956Z", "level": "Plan created: b9309682-6838-4743-83d9-d05497d4c741"}
+{"timestamp": "2025-12-06T15:31:23.605405Z", "level": "Running TaskReasoning for goal."}
+{"timestamp": "2025-12-06T15:31:23.610458Z", "level": "Prompt for task reasoning generated."}
+{"timestamp": "2025-12-06T15:31:34.625628Z", "level": "Task reasoning completed successfully."}
+{"timestamp": "2025-12-06T15:31:34.626454Z", "level": "Running PERTScheduler."}
+{"timestamp": "2025-12-06T15:31:34.627777Z", "level": "Initializing PERTScheduler..."}
+{"timestamp": "2025-12-06T15:31:34.628291Z", "level": "Performing topological sort..."}
+{"timestamp": "2025-12-06T15:31:34.628654Z", "level": "Topological sort completed: ['T1', 'T3', 'T2', 'T4', 'T5', 'T6', 'T7', 'T8']"}
+{"timestamp": "2025-12-06T15:31:34.628967Z", "level": "PERTScheduler initialized successfully."}
+{"timestamp": "2025-12-06T15:31:34.629689Z", "level": "Running PERTScheduler..."}
+{"timestamp": "2025-12-06T15:31:34.630273Z", "level": "Computing forward pass..."}
+{"timestamp": "2025-12-06T15:31:34.631654Z", "level": "Forward pass completed."}
+{"timestamp": "2025-12-06T15:31:34.632477Z", "level": "Computing backward pass..."}
+{"timestamp": "2025-12-06T15:31:34.633018Z", "level": "Backward pass completed."}
+{"timestamp": "2025-12-06T15:31:34.633679Z", "level": "Converting offsets to calendar dates..."}
+{"timestamp": "2025-12-06T15:31:34.634521Z", "level": "Calendar mapping completed."}
+{"timestamp": "2025-12-06T15:31:34.635208Z", "level": "Running Monte Carlo simulation..."}
+{"timestamp": "2025-12-06T15:31:34.781630Z", "level": "Monte Carlo simulation completed."}
+{"timestamp": "2025-12-06T15:31:34.782207Z", "level": "PERTScheduler completed successfully."}
+{"timestamp": "2025-12-06T15:31:34.782836Z", "level": "Plan created: 81340ac1-f000-4895-bc69-b307209dd38e"}
+{"timestamp": "2025-12-06T15:38:40.356115Z", "level": "Running TaskReasoning for goal."}
+{"timestamp": "2025-12-06T15:38:40.360431Z", "level": "Prompt for task reasoning generated."}
+{"timestamp": "2025-12-06T15:38:51.591120Z", "level": "Task reasoning completed successfully."}
+{"timestamp": "2025-12-06T15:38:51.593306Z", "level": "Running PERTScheduler."}
+{"timestamp": "2025-12-06T15:38:51.595997Z", "level": "Initializing PERTScheduler..."}
+{"timestamp": "2025-12-06T15:38:51.598938Z", "level": "Performing topological sort..."}
+{"timestamp": "2025-12-06T15:38:51.605162Z", "level": "Topological sort completed: ['T1', 'T3', 'T2', 'T4', 'T5', 'T6', 'T7', 'T8']"}
+{"timestamp": "2025-12-06T15:38:51.611827Z", "level": "PERTScheduler initialized successfully."}
+{"timestamp": "2025-12-06T15:38:51.616057Z", "level": "Running PERTScheduler..."}
+{"timestamp": "2025-12-06T15:38:51.622961Z", "level": "Computing forward pass..."}
+{"timestamp": "2025-12-06T15:38:51.626933Z", "level": "Forward pass completed."}
+{"timestamp": "2025-12-06T15:38:51.629980Z", "level": "Computing backward pass..."}
+{"timestamp": "2025-12-06T15:38:51.634605Z", "level": "Backward pass completed."}
+{"timestamp": "2025-12-06T15:38:51.639709Z", "level": "Converting offsets to calendar dates..."}
+{"timestamp": "2025-12-06T15:38:51.641460Z", "level": "Calendar mapping completed."}
+{"timestamp": "2025-12-06T15:38:51.645479Z", "level": "Running Monte Carlo simulation..."}
+{"timestamp": "2025-12-06T15:38:51.804769Z", "level": "Monte Carlo simulation completed."}
+{"timestamp": "2025-12-06T15:38:51.806239Z", "level": "PERTScheduler completed successfully."}
+{"timestamp": "2025-12-06T15:38:51.806934Z", "level": "Plan created: 763b850e-367d-434c-9ed9-b1e60cbd0a1f"}

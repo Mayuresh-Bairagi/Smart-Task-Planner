@@ -22,12 +22,22 @@ class Orchestrator:
     def create_plan(self, goal: str, constraints: str, start_date: str, weekend=None, holidays=None) -> Dict[str, Any]:
         try:
             self.logger.info("Running TaskReasoning for goal.")
-            task_output = self.task_reasoner.generate_tasks(goal=goal, constraints=constraints)
+            tasks = self.task_reasoner.generate_tasks(goal=goal, constraints=constraints)
 
-            tasks = [t for t in task_output.tasks] 
+            # Build dependency mapping (unchanged)
+            task_map = {t["id"]: t["dependencies"] for t in tasks["tasks"]}
 
             self.logger.info("Running PERTScheduler.")
-            scheduler = PERTScheduler(tasks=tasks, start_date=start_date, weekend=weekend, holidays=holidays)
+            print(tasks)
+
+            # FIXED: pass list of Task objects, not the entire dict
+            scheduler = PERTScheduler(
+                tasks=tasks["tasks"],
+                start_date=start_date,
+                weekend=weekend,
+                holidays=holidays
+            )
+
             scheduler_out = scheduler.run(run_monte_carlo=True)
 
             plan_id = str(uuid.uuid4())
@@ -35,8 +45,9 @@ class Orchestrator:
                 "plan_id": plan_id,
                 "goal": goal,
                 "constraints": constraints,
-                "task_output": task_output,
-                "scheduler_output": scheduler_out
+                "task_output": tasks,
+                "scheduler_output": scheduler_out,
+                "task_map": task_map,
             }
             self.plans[plan_id] = payload
             self.logger.info(f"Plan created: {plan_id}")

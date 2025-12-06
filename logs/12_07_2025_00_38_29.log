@@ -1,0 +1,11 @@
+{"available_keys": ["GROQ_API_KEY", "GOOGLE_API_KEY"], "timestamp": "2025-12-06T19:08:30.362624Z", "level": "Environment variables validated successfully"}
+{"config_keys": ["llm"], "timestamp": "2025-12-06T19:08:30.373366Z", "level": "Configurations loaded successfully"}
+{"timestamp": "2025-12-06T19:08:30.376315Z", "level": "Loading LLM"}
+{"provider": "google", "model": "gemini-2.0-flash", "temperature": 0.0, "max_tokens": 2048, "timestamp": "2025-12-06T19:08:30.380330Z", "level": "Loading LLM"}
+{"timestamp": "2025-12-06T19:08:30.519532Z", "level": "NegotiationEngine initialized."}
+{"timestamp": "2025-12-06T19:08:30.522122Z", "level": "Orchestrator initialized."}
+{"timestamp": "2025-12-06T19:12:27.721778Z", "level": "Running TaskReasoning for goal."}
+{"timestamp": "2025-12-06T19:12:27.732336Z", "level": "Prompt for task reasoning generated."}
+{"timestamp": "2025-12-06T19:12:37.771954Z", "level": "Task reasoning completed successfully."}
+{"timestamp": "2025-12-06T19:12:37.772972Z", "level": "Plan creation failed: 'dict' object has no attribute 'tasks'"}
+{"timestamp": "2025-12-06T19:12:37.776031Z", "level": "Create plan failed: Error in [D:\\Project\\Smart-Task-Planner\\src\\orchestrator.py] at line [27]\nMessage:Plan creation failed: 'dict' object has no attribute 'tasks'\nTraceback:Traceback (most recent call last):\n  File \"D:\\Project\\Smart-Task-Planner\\src\\orchestrator.py\", line 27, in create_plan\n    tasks = [t for t in task_output.tasks]\n                       ^^^^^^^^^^^^^^^^^\nAttributeError: 'dict' object has no attribute 'tasks'\n"}

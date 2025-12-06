@@ -2,7 +2,7 @@ from logger.customlogger import CustomLogger
 from expection.customExpection import smartTaskPlannerException
 from utils.model_loader import ModelLoader
 from langchain_core.output_parsers import JsonOutputParser
-from langchain_core.output_parsers import PydanticOutputParser
+from langchain.output_parsers import OutputFixingParser
 from model.model import *
 from Prompt.prompt_lib import PROMPT_REGISTRY
 
@@ -18,7 +18,7 @@ class TaskResoning:
             self.parser = JsonOutputParser(pydantic_object=TaskReasoningOutput)
 
             self.prompt = PROMPT_REGISTRY["taskReasoning"]
-            self.fixing_parser = PydanticOutputParser(pydantic_object=TaskReasoningOutput)
+            self.fixing_parser = OutputFixingParser.from_llm(parser=self.parser, llm=self.llm)
             self.chain = self.prompt | self.llm | self.fixing_parser
         except Exception as e:
             self.logger.error(f"Error initializing task reasoning :{e}")

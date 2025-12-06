@@ -3,3 +3,30 @@ smart_task_planner/__pycache__/
 smartTask
 test.ipynb
 test.py
+node_modules
+
+
+# Logs
+smart-task-planner-frotend/logs
+smart-task-planner-frotend/*.log
+smart-task-planner-frotend/npm-debug.log*
+smart-task-planner-frotend/yarn-debug.log*
+smart-task-planner-frotend/yarn-error.log*
+smart-task-planner-frotend/pnpm-debug.log*
+smart-task-planner-frotend/lerna-debug.log*
+
+node_modules
+smart-task-planner-frotend/dist
+smart-task-planner-frotend/dist-ssr
+smart-task-planner-frotend/*.local
+
+# Editor directories and files
+smart-task-planner-frotend/.vscode/*
+smart-task-planner-frotend/!.vscode/extensions.json
+smart-task-planner-frotend/.idea
+smart-task-planner-frotend/.DS_Store
+smart-task-planner-frotend/*.suo
+smart-task-planner-frotend/*.ntvs*
+smart-task-planner-frotend/*.njsproj
+smart-task-planner-frotend/*.sln
+smart-task-planner-frotend/*.sw?

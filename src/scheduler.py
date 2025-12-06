@@ -12,7 +12,6 @@ from expection.customExpection import smartTaskPlannerException
 from model.model import Task, TaskSchedule, SchedulerOutput
 
 
-
 class CalendarUtility:
     def __init__(self, logger):
         self.logger = logger
@@ -38,14 +37,25 @@ class CalendarUtility:
         return current
 
 
-
 class PERTScheduler:
-    def __init__(self,tasks: List[Task],start_date: str,weekend: Optional[List[int]] = None,holidays: Optional[List[str]] = None):
+    def __init__(self, tasks: List[Task], start_date: str,
+                 weekend: Optional[List[int]] = None, holidays: Optional[List[str]] = None):
         try:
             self.logger = CustomLogger().get_logger(__file__)
             self.logger.info("Initializing PERTScheduler...")
+            print(tasks)
 
-            self.tasks: Dict[str, Task] = {t.id: t for t in tasks}
+            normalized = []
+            for t in tasks:
+                if isinstance(t, Task):
+                    normalized.append(t)
+                elif isinstance(t, dict):
+                    normalized.append(Task(**t))
+                else:
+                    raise ValueError(f"Unsupported task type: {type(t)}")
+                
+            self.tasks: Dict[str, Task] = {t.id: t for t in normalized}
+
             self.start_date: date = date.fromisoformat(start_date)
 
             self.weekend = tuple(weekend) if weekend else (5, 6)
@@ -92,7 +102,6 @@ class PERTScheduler:
         except Exception as e:
             self.logger.error(f"Topological sort failed: {e}")
             raise smartTaskPlannerException(f"Topological sort failed: {e}")
-
 
     def compute_forward_pass(self) -> Dict[str, Tuple[int, int]]:
         try:
@@ -170,7 +179,6 @@ class PERTScheduler:
             self.logger.error(f"Calendar conversion error: {e}")
             raise smartTaskPlannerException(f"Calendar conversion error: {e}")
 
-
     def monte_carlo(self, n_samples: int = 2000):
         try:
             self.logger.info("Running Monte Carlo simulation...")
@@ -222,7 +230,6 @@ class PERTScheduler:
         except Exception as e:
             self.logger.error(f"Monte Carlo failed: {e}")
             raise smartTaskPlannerException(f"Monte Carlo failed: {e}")
-
 
     def schedule_from_samples(self, sampled: Dict[str, int]):
         try:
