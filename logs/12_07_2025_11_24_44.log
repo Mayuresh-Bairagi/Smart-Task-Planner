@@ -1,0 +1,496 @@
+{"available_keys": ["GROQ_API_KEY", "GOOGLE_API_KEY"], "timestamp": "2025-12-07T05:54:44.430796Z", "level": "Environment variables validated successfully"}
+{"config_keys": ["llm"], "timestamp": "2025-12-07T05:54:44.432348Z", "level": "Configurations loaded successfully"}
+{"timestamp": "2025-12-07T05:54:44.432348Z", "level": "Loading LLM"}
+{"provider": "google", "model": "gemini-2.0-flash", "temperature": 0.0, "max_tokens": 2048, "timestamp": "2025-12-07T05:54:44.433348Z", "level": "Loading LLM"}
+{"timestamp": "2025-12-07T05:54:44.477657Z", "level": "NegotiationEngine initialized."}
+{"timestamp": "2025-12-07T05:54:44.477657Z", "level": "Orchestrator initialized."}
+{"timestamp": "2025-12-07T05:55:27.245900Z", "level": "Running TaskReasoning for goal."}
+{"timestamp": "2025-12-07T05:55:27.260862Z", "level": "Prompt for task reasoning generated."}
+Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+Please retry in 32.666905184s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 32
+}
+].
+Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 4.0 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+Please retry in 30.487448754s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 30
+}
+].
+Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 8.0 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+Please retry in 26.354130866s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 26
+}
+].
+Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 16.0 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+Please retry in 18.24338044s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 18
+}
+].
+Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 32.0 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+Please retry in 2.11962853s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 2
+}
+].
+{"timestamp": "2025-12-07T05:56:30.176776Z", "level": "Error generating tasks: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 29.990687994s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\nviolations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\nviolations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\"\n  quota_id: \"GenerateContentInputTokensPerModelPerMinute-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\n, retry_delay {\n  seconds: 29\n}\n]"}
+{"timestamp": "2025-12-07T05:56:30.205783Z", "level": "Plan creation failed: Error in [D:\\Project\\Smart-Task-Planner\\src\\task_reasoning.py] at line [36]\nMessage:Error generating tasks: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 29.990687994s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\nviolations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\nviolations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\"\n  quota_id: \"GenerateContentInputTokensPerModelPerMinute-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\n, retry_delay {\n  seconds: 29\n}\n]\nTraceback:Traceback (most recent call last):\n  File \"D:\\Project\\Smart-Task-Planner\\src\\task_reasoning.py\", line 36, in generate_tasks\n    result = self.chain.invoke(prompt_filled)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\runnables\\base.py\", line 3082, in invoke\n    input_ = context.run(step.invoke, input_, config)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 1488, in invoke\n    return super().invoke(input, config, stop=stop, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\language_models\\chat_models.py\", line 393, in invoke\n    self.generate_prompt(\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\language_models\\chat_models.py\", line 1019, in generate_prompt\n    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\language_models\\chat_models.py\", line 837, in generate\n    self._generate_with_cache(\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\language_models\\chat_models.py\", line 1085, in _generate_with_cache\n    result = self._generate(\n             ^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 1595, in _generate\n    response: GenerateContentResponse = _chat_with_retry(\n                                        ^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 247, in _chat_with_retry\n    return _chat_with_retry(**params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 338, in wrapped_f\n    return copy(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 477, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 378, in iter\n    result = action(retry_state)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 420, in exc_check\n    raise retry_exc.reraise()\n          ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 187, in reraise\n    raise self.last_attempt.result()\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\concurrent\\futures\\_base.py\", line 449, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\concurrent\\futures\\_base.py\", line 401, in __get_result\n    raise self._exception\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 480, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 236, in _chat_with_retry\n    raise e\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 216, in _chat_with_retry\n    return generation_method(**kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\ai\\generativelanguage_v1beta\\services\\generative_service\\client.py\", line 835, in generate_content\n    response = rpc(\n               ^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\gapic_v1\\method.py\", line 131, in __call__\n    return wrapped_func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\retry\\retry_unary.py\", line 294, in retry_wrapped_func\n    return retry_target(\n           ^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\retry\\retry_unary.py\", line 156, in retry_target\n    next_sleep = _retry_error_helper(\n                 ^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\retry\\retry_base.py\", line 214, in _retry_error_helper\n    raise final_exc from source_exc\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\retry\\retry_unary.py\", line 147, in retry_target\n    result = target()\n             ^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\timeout.py\", line 130, in func_with_timeout\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\grpc_helpers.py\", line 78, in error_remapped_callable\n    raise exceptions.from_grpc_error(exc) from exc\ngoogle.api_core.exceptions.ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 29.990687994s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\nviolations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\nviolations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\"\n  quota_id: \"GenerateContentInputTokensPerModelPerMinute-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\n, retry_delay {\n  seconds: 29\n}\n]\n"}
+{"timestamp": "2025-12-07T05:56:30.213030Z", "level": "Create plan failed: Error in [D:\\Project\\Smart-Task-Planner\\src\\orchestrator.py] at line [25]\nMessage:Plan creation failed: Error in [D:\\Project\\Smart-Task-Planner\\src\\task_reasoning.py] at line [36]\nMessage:Error generating tasks: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 29.990687994s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\nviolations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\nviolations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\"\n  quota_id: \"GenerateContentInputTokensPerModelPerMinute-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\n, retry_delay {\n  seconds: 29\n}\n]\nTraceback:Traceback (most recent call last):\n  File \"D:\\Project\\Smart-Task-Planner\\src\\task_reasoning.py\", line 36, in generate_tasks\n    result = self.chain.invoke(prompt_filled)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\runnables\\base.py\", line 3082, in invoke\n    input_ = context.run(step.invoke, input_, config)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 1488, in invoke\n    return super().invoke(input, config, stop=stop, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\language_models\\chat_models.py\", line 393, in invoke\n    self.generate_prompt(\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\language_models\\chat_models.py\", line 1019, in generate_prompt\n    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\language_models\\chat_models.py\", line 837, in generate\n    self._generate_with_cache(\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\language_models\\chat_models.py\", line 1085, in _generate_with_cache\n    result = self._generate(\n             ^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 1595, in _generate\n    response: GenerateContentResponse = _chat_with_retry(\n                                        ^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 247, in _chat_with_retry\n    return _chat_with_retry(**params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 338, in wrapped_f\n    return copy(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 477, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 378, in iter\n    result = action(retry_state)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 420, in exc_check\n    raise retry_exc.reraise()\n          ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 187, in reraise\n    raise self.last_attempt.result()\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\concurrent\\futures\\_base.py\", line 449, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\concurrent\\futures\\_base.py\", line 401, in __get_result\n    raise self._exception\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 480, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 236, in _chat_with_retry\n    raise e\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 216, in _chat_with_retry\n    return generation_method(**kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\ai\\generativelanguage_v1beta\\services\\generative_service\\client.py\", line 835, in generate_content\n    response = rpc(\n               ^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\gapic_v1\\method.py\", line 131, in __call__\n    return wrapped_func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\retry\\retry_unary.py\", line 294, in retry_wrapped_func\n    return retry_target(\n           ^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\retry\\retry_unary.py\", line 156, in retry_target\n    next_sleep = _retry_error_helper(\n                 ^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\retry\\retry_base.py\", line 214, in _retry_error_helper\n    raise final_exc from source_exc\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\retry\\retry_unary.py\", line 147, in retry_target\n    result = target()\n             ^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\timeout.py\", line 130, in func_with_timeout\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\grpc_helpers.py\", line 78, in error_remapped_callable\n    raise exceptions.from_grpc_error(exc) from exc\ngoogle.api_core.exceptions.ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 29.990687994s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\nviolations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\nviolations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\"\n  quota_id: \"GenerateContentInputTokensPerModelPerMinute-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\n, retry_delay {\n  seconds: 29\n}\n]\n\nTraceback:Traceback (most recent call last):\n  File \"D:\\Project\\Smart-Task-Planner\\src\\task_reasoning.py\", line 36, in generate_tasks\n    result = self.chain.invoke(prompt_filled)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\runnables\\base.py\", line 3082, in invoke\n    input_ = context.run(step.invoke, input_, config)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 1488, in invoke\n    return super().invoke(input, config, stop=stop, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\language_models\\chat_models.py\", line 393, in invoke\n    self.generate_prompt(\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\language_models\\chat_models.py\", line 1019, in generate_prompt\n    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\language_models\\chat_models.py\", line 837, in generate\n    self._generate_with_cache(\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\language_models\\chat_models.py\", line 1085, in _generate_with_cache\n    result = self._generate(\n             ^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 1595, in _generate\n    response: GenerateContentResponse = _chat_with_retry(\n                                        ^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 247, in _chat_with_retry\n    return _chat_with_retry(**params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 338, in wrapped_f\n    return copy(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 477, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 378, in iter\n    result = action(retry_state)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 420, in exc_check\n    raise retry_exc.reraise()\n          ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 187, in reraise\n    raise self.last_attempt.result()\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\concurrent\\futures\\_base.py\", line 449, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\concurrent\\futures\\_base.py\", line 401, in __get_result\n    raise self._exception\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 480, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 236, in _chat_with_retry\n    raise e\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 216, in _chat_with_retry\n    return generation_method(**kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\ai\\generativelanguage_v1beta\\services\\generative_service\\client.py\", line 835, in generate_content\n    response = rpc(\n               ^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\gapic_v1\\method.py\", line 131, in __call__\n    return wrapped_func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\retry\\retry_unary.py\", line 294, in retry_wrapped_func\n    return retry_target(\n           ^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\retry\\retry_unary.py\", line 156, in retry_target\n    next_sleep = _retry_error_helper(\n                 ^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\retry\\retry_base.py\", line 214, in _retry_error_helper\n    raise final_exc from source_exc\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\retry\\retry_unary.py\", line 147, in retry_target\n    result = target()\n             ^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\timeout.py\", line 130, in func_with_timeout\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\grpc_helpers.py\", line 78, in error_remapped_callable\n    raise exceptions.from_grpc_error(exc) from exc\ngoogle.api_core.exceptions.ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 29.990687994s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\nviolations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\nviolations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\"\n  quota_id: \"GenerateContentInputTokensPerModelPerMinute-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\n, retry_delay {\n  seconds: 29\n}\n]\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"D:\\Project\\Smart-Task-Planner\\src\\orchestrator.py\", line 25, in create_plan\n    tasks = self.task_reasoner.generate_tasks(goal=goal, constraints=constraints)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Project\\Smart-Task-Planner\\src\\task_reasoning.py\", line 41, in generate_tasks\n    raise smartTaskPlannerException(f\"Error generating tasks: {e}\")\nexpection.customExpection.smartTaskPlannerException: Error in [D:\\Project\\Smart-Task-Planner\\src\\task_reasoning.py] at line [36]\nMessage:Error generating tasks: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 29.990687994s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\nviolations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\nviolations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\"\n  quota_id: \"GenerateContentInputTokensPerModelPerMinute-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\n, retry_delay {\n  seconds: 29\n}\n]\nTraceback:Traceback (most recent call last):\n  File \"D:\\Project\\Smart-Task-Planner\\src\\task_reasoning.py\", line 36, in generate_tasks\n    result = self.chain.invoke(prompt_filled)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\runnables\\base.py\", line 3082, in invoke\n    input_ = context.run(step.invoke, input_, config)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 1488, in invoke\n    return super().invoke(input, config, stop=stop, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\language_models\\chat_models.py\", line 393, in invoke\n    self.generate_prompt(\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\language_models\\chat_models.py\", line 1019, in generate_prompt\n    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\language_models\\chat_models.py\", line 837, in generate\n    self._generate_with_cache(\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\language_models\\chat_models.py\", line 1085, in _generate_with_cache\n    result = self._generate(\n             ^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 1595, in _generate\n    response: GenerateContentResponse = _chat_with_retry(\n                                        ^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 247, in _chat_with_retry\n    return _chat_with_retry(**params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 338, in wrapped_f\n    return copy(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 477, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 378, in iter\n    result = action(retry_state)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 420, in exc_check\n    raise retry_exc.reraise()\n          ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 187, in reraise\n    raise self.last_attempt.result()\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\concurrent\\futures\\_base.py\", line 449, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\concurrent\\futures\\_base.py\", line 401, in __get_result\n    raise self._exception\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 480, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 236, in _chat_with_retry\n    raise e\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 216, in _chat_with_retry\n    return generation_method(**kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\ai\\generativelanguage_v1beta\\services\\generative_service\\client.py\", line 835, in generate_content\n    response = rpc(\n               ^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\gapic_v1\\method.py\", line 131, in __call__\n    return wrapped_func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\retry\\retry_unary.py\", line 294, in retry_wrapped_func\n    return retry_target(\n           ^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\retry\\retry_unary.py\", line 156, in retry_target\n    next_sleep = _retry_error_helper(\n                 ^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\retry\\retry_base.py\", line 214, in _retry_error_helper\n    raise final_exc from source_exc\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\retry\\retry_unary.py\", line 147, in retry_target\n    result = target()\n             ^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\timeout.py\", line 130, in func_with_timeout\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\grpc_helpers.py\", line 78, in error_remapped_callable\n    raise exceptions.from_grpc_error(exc) from exc\ngoogle.api_core.exceptions.ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 29.990687994s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\nviolations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\nviolations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\"\n  quota_id: \"GenerateContentInputTokensPerModelPerMinute-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\n, retry_delay {\n  seconds: 29\n}\n]\n\n"}
+{"timestamp": "2025-12-07T05:57:35.806751Z", "level": "Running TaskReasoning for goal."}
+{"timestamp": "2025-12-07T05:57:35.811748Z", "level": "Prompt for task reasoning generated."}
+Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+Please retry in 24.232162479s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 24
+}
+].
+Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 4.0 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+Please retry in 22.102831019s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 22
+}
+].
+Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 8.0 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+Please retry in 17.986789992s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 17
+}
+].
+Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 16.0 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+Please retry in 9.855704729s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 9
+}
+].
+Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 32.0 seconds as it raised ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+Please retry in 53.728549872s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 53
+}
+].
+{"timestamp": "2025-12-07T05:58:38.551540Z", "level": "Error generating tasks: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 21.6103476s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\nviolations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\nviolations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\"\n  quota_id: \"GenerateContentInputTokensPerModelPerMinute-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\n, retry_delay {\n  seconds: 21\n}\n]"}
+{"timestamp": "2025-12-07T05:58:38.557070Z", "level": "Plan creation failed: Error in [D:\\Project\\Smart-Task-Planner\\src\\task_reasoning.py] at line [36]\nMessage:Error generating tasks: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 21.6103476s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\nviolations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\nviolations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\"\n  quota_id: \"GenerateContentInputTokensPerModelPerMinute-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\n, retry_delay {\n  seconds: 21\n}\n]\nTraceback:Traceback (most recent call last):\n  File \"D:\\Project\\Smart-Task-Planner\\src\\task_reasoning.py\", line 36, in generate_tasks\n    result = self.chain.invoke(prompt_filled)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\runnables\\base.py\", line 3082, in invoke\n    input_ = context.run(step.invoke, input_, config)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 1488, in invoke\n    return super().invoke(input, config, stop=stop, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\language_models\\chat_models.py\", line 393, in invoke\n    self.generate_prompt(\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\language_models\\chat_models.py\", line 1019, in generate_prompt\n    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\language_models\\chat_models.py\", line 837, in generate\n    self._generate_with_cache(\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\language_models\\chat_models.py\", line 1085, in _generate_with_cache\n    result = self._generate(\n             ^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 1595, in _generate\n    response: GenerateContentResponse = _chat_with_retry(\n                                        ^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 247, in _chat_with_retry\n    return _chat_with_retry(**params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 338, in wrapped_f\n    return copy(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 477, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 378, in iter\n    result = action(retry_state)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 420, in exc_check\n    raise retry_exc.reraise()\n          ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 187, in reraise\n    raise self.last_attempt.result()\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\concurrent\\futures\\_base.py\", line 449, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\concurrent\\futures\\_base.py\", line 401, in __get_result\n    raise self._exception\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 480, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 236, in _chat_with_retry\n    raise e\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 216, in _chat_with_retry\n    return generation_method(**kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\ai\\generativelanguage_v1beta\\services\\generative_service\\client.py\", line 835, in generate_content\n    response = rpc(\n               ^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\gapic_v1\\method.py\", line 131, in __call__\n    return wrapped_func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\retry\\retry_unary.py\", line 294, in retry_wrapped_func\n    return retry_target(\n           ^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\retry\\retry_unary.py\", line 156, in retry_target\n    next_sleep = _retry_error_helper(\n                 ^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\retry\\retry_base.py\", line 214, in _retry_error_helper\n    raise final_exc from source_exc\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\retry\\retry_unary.py\", line 147, in retry_target\n    result = target()\n             ^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\timeout.py\", line 130, in func_with_timeout\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\grpc_helpers.py\", line 78, in error_remapped_callable\n    raise exceptions.from_grpc_error(exc) from exc\ngoogle.api_core.exceptions.ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 21.6103476s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\nviolations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\nviolations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\"\n  quota_id: \"GenerateContentInputTokensPerModelPerMinute-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\n, retry_delay {\n  seconds: 21\n}\n]\n"}
+{"timestamp": "2025-12-07T05:58:38.563063Z", "level": "Create plan failed: Error in [D:\\Project\\Smart-Task-Planner\\src\\orchestrator.py] at line [25]\nMessage:Plan creation failed: Error in [D:\\Project\\Smart-Task-Planner\\src\\task_reasoning.py] at line [36]\nMessage:Error generating tasks: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 21.6103476s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\nviolations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\nviolations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\"\n  quota_id: \"GenerateContentInputTokensPerModelPerMinute-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\n, retry_delay {\n  seconds: 21\n}\n]\nTraceback:Traceback (most recent call last):\n  File \"D:\\Project\\Smart-Task-Planner\\src\\task_reasoning.py\", line 36, in generate_tasks\n    result = self.chain.invoke(prompt_filled)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\runnables\\base.py\", line 3082, in invoke\n    input_ = context.run(step.invoke, input_, config)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 1488, in invoke\n    return super().invoke(input, config, stop=stop, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\language_models\\chat_models.py\", line 393, in invoke\n    self.generate_prompt(\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\language_models\\chat_models.py\", line 1019, in generate_prompt\n    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\language_models\\chat_models.py\", line 837, in generate\n    self._generate_with_cache(\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\language_models\\chat_models.py\", line 1085, in _generate_with_cache\n    result = self._generate(\n             ^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 1595, in _generate\n    response: GenerateContentResponse = _chat_with_retry(\n                                        ^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 247, in _chat_with_retry\n    return _chat_with_retry(**params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 338, in wrapped_f\n    return copy(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 477, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 378, in iter\n    result = action(retry_state)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 420, in exc_check\n    raise retry_exc.reraise()\n          ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 187, in reraise\n    raise self.last_attempt.result()\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\concurrent\\futures\\_base.py\", line 449, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\concurrent\\futures\\_base.py\", line 401, in __get_result\n    raise self._exception\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 480, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 236, in _chat_with_retry\n    raise e\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 216, in _chat_with_retry\n    return generation_method(**kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\ai\\generativelanguage_v1beta\\services\\generative_service\\client.py\", line 835, in generate_content\n    response = rpc(\n               ^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\gapic_v1\\method.py\", line 131, in __call__\n    return wrapped_func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\retry\\retry_unary.py\", line 294, in retry_wrapped_func\n    return retry_target(\n           ^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\retry\\retry_unary.py\", line 156, in retry_target\n    next_sleep = _retry_error_helper(\n                 ^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\retry\\retry_base.py\", line 214, in _retry_error_helper\n    raise final_exc from source_exc\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\retry\\retry_unary.py\", line 147, in retry_target\n    result = target()\n             ^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\timeout.py\", line 130, in func_with_timeout\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\grpc_helpers.py\", line 78, in error_remapped_callable\n    raise exceptions.from_grpc_error(exc) from exc\ngoogle.api_core.exceptions.ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 21.6103476s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\nviolations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\nviolations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\"\n  quota_id: \"GenerateContentInputTokensPerModelPerMinute-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\n, retry_delay {\n  seconds: 21\n}\n]\n\nTraceback:Traceback (most recent call last):\n  File \"D:\\Project\\Smart-Task-Planner\\src\\task_reasoning.py\", line 36, in generate_tasks\n    result = self.chain.invoke(prompt_filled)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\runnables\\base.py\", line 3082, in invoke\n    input_ = context.run(step.invoke, input_, config)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 1488, in invoke\n    return super().invoke(input, config, stop=stop, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\language_models\\chat_models.py\", line 393, in invoke\n    self.generate_prompt(\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\language_models\\chat_models.py\", line 1019, in generate_prompt\n    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\language_models\\chat_models.py\", line 837, in generate\n    self._generate_with_cache(\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\language_models\\chat_models.py\", line 1085, in _generate_with_cache\n    result = self._generate(\n             ^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 1595, in _generate\n    response: GenerateContentResponse = _chat_with_retry(\n                                        ^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 247, in _chat_with_retry\n    return _chat_with_retry(**params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 338, in wrapped_f\n    return copy(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 477, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 378, in iter\n    result = action(retry_state)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 420, in exc_check\n    raise retry_exc.reraise()\n          ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 187, in reraise\n    raise self.last_attempt.result()\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\concurrent\\futures\\_base.py\", line 449, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\concurrent\\futures\\_base.py\", line 401, in __get_result\n    raise self._exception\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 480, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 236, in _chat_with_retry\n    raise e\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 216, in _chat_with_retry\n    return generation_method(**kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\ai\\generativelanguage_v1beta\\services\\generative_service\\client.py\", line 835, in generate_content\n    response = rpc(\n               ^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\gapic_v1\\method.py\", line 131, in __call__\n    return wrapped_func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\retry\\retry_unary.py\", line 294, in retry_wrapped_func\n    return retry_target(\n           ^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\retry\\retry_unary.py\", line 156, in retry_target\n    next_sleep = _retry_error_helper(\n                 ^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\retry\\retry_base.py\", line 214, in _retry_error_helper\n    raise final_exc from source_exc\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\retry\\retry_unary.py\", line 147, in retry_target\n    result = target()\n             ^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\timeout.py\", line 130, in func_with_timeout\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\grpc_helpers.py\", line 78, in error_remapped_callable\n    raise exceptions.from_grpc_error(exc) from exc\ngoogle.api_core.exceptions.ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 21.6103476s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\nviolations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\nviolations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\"\n  quota_id: \"GenerateContentInputTokensPerModelPerMinute-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\n, retry_delay {\n  seconds: 21\n}\n]\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"D:\\Project\\Smart-Task-Planner\\src\\orchestrator.py\", line 25, in create_plan\n    tasks = self.task_reasoner.generate_tasks(goal=goal, constraints=constraints)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Project\\Smart-Task-Planner\\src\\task_reasoning.py\", line 41, in generate_tasks\n    raise smartTaskPlannerException(f\"Error generating tasks: {e}\")\nexpection.customExpection.smartTaskPlannerException: Error in [D:\\Project\\Smart-Task-Planner\\src\\task_reasoning.py] at line [36]\nMessage:Error generating tasks: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 21.6103476s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\nviolations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\nviolations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\"\n  quota_id: \"GenerateContentInputTokensPerModelPerMinute-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\n, retry_delay {\n  seconds: 21\n}\n]\nTraceback:Traceback (most recent call last):\n  File \"D:\\Project\\Smart-Task-Planner\\src\\task_reasoning.py\", line 36, in generate_tasks\n    result = self.chain.invoke(prompt_filled)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\runnables\\base.py\", line 3082, in invoke\n    input_ = context.run(step.invoke, input_, config)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 1488, in invoke\n    return super().invoke(input, config, stop=stop, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\language_models\\chat_models.py\", line 393, in invoke\n    self.generate_prompt(\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\language_models\\chat_models.py\", line 1019, in generate_prompt\n    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\language_models\\chat_models.py\", line 837, in generate\n    self._generate_with_cache(\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_core\\language_models\\chat_models.py\", line 1085, in _generate_with_cache\n    result = self._generate(\n             ^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 1595, in _generate\n    response: GenerateContentResponse = _chat_with_retry(\n                                        ^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 247, in _chat_with_retry\n    return _chat_with_retry(**params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 338, in wrapped_f\n    return copy(f, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 477, in __call__\n    do = self.iter(retry_state=retry_state)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 378, in iter\n    result = action(retry_state)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 420, in exc_check\n    raise retry_exc.reraise()\n          ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 187, in reraise\n    raise self.last_attempt.result()\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\concurrent\\futures\\_base.py\", line 449, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\concurrent\\futures\\_base.py\", line 401, in __get_result\n    raise self._exception\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\tenacity\\__init__.py\", line 480, in __call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 236, in _chat_with_retry\n    raise e\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\langchain_google_genai\\chat_models.py\", line 216, in _chat_with_retry\n    return generation_method(**kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\ai\\generativelanguage_v1beta\\services\\generative_service\\client.py\", line 835, in generate_content\n    response = rpc(\n               ^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\gapic_v1\\method.py\", line 131, in __call__\n    return wrapped_func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\retry\\retry_unary.py\", line 294, in retry_wrapped_func\n    return retry_target(\n           ^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\retry\\retry_unary.py\", line 156, in retry_target\n    next_sleep = _retry_error_helper(\n                 ^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\retry\\retry_base.py\", line 214, in _retry_error_helper\n    raise final_exc from source_exc\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\retry\\retry_unary.py\", line 147, in retry_target\n    result = target()\n             ^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\timeout.py\", line 130, in func_with_timeout\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mayur\\anaconda3\\envs\\automl\\Lib\\site-packages\\google\\api_core\\grpc_helpers.py\", line 78, in error_remapped_callable\n    raise exceptions.from_grpc_error(exc) from exc\ngoogle.api_core.exceptions.ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 21.6103476s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\nviolations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\nviolations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count\"\n  quota_id: \"GenerateContentInputTokensPerModelPerMinute-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.0-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n}\n, retry_delay {\n  seconds: 21\n}\n]\n\n"}
