@@ -18,7 +18,8 @@ export default function TaskCalendar({ tasks }) {
     start: new Date(t.start),
     end: new Date(t.end),
     allDay: false,
-    critical: t.custom_class === "critical"
+    critical: t.custom_class === "critical",
+    resource: t.description
   }));
 
   // Custom event styling
@@ -47,6 +48,8 @@ export default function TaskCalendar({ tasks }) {
         endAccessor="end"
         eventPropGetter={eventStyleGetter}
         style={{ height: 500, borderRadius: "12px" }}
+        views={['month', 'week', 'day', 'agenda']}
+        defaultView="month"
       />
     </div>
   );

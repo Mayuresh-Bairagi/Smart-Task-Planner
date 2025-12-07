@@ -48,6 +48,7 @@
 - 🤝 **Intelligent Negotiation**: AI-powered deadline negotiation with feasibility analysis
 - 📅 **Smart Scheduling**: Respects weekends, holidays, and task dependencies
 - 🔄 **RESTful API**: Easy integration with existing tools and workflows
+- 🎨 **Modern Web UI**: React-based frontend with interactive Gantt charts and calendar views
 
 ---
 
@@ -69,6 +70,13 @@
 ## 🏗️ System Architecture
 
 ```
+┌─────────────────────────────────────────────────────────────┐
+│                   React Frontend (Vite)                      │
+│           (smart-task-planner-frontend/)                     │
+│  • Home Page  • Plan View  • Gantt Chart  • Negotiation     │
+└────────────────────┬────────────────────────────────────────┘
+                     │ HTTP/REST
+                     ▼
 ┌─────────────────────────────────────────────────────────────┐
 │                      FastAPI REST API                        │
 │                     (app/main.py)                            │
@@ -185,12 +193,20 @@ graph TD
    # Edit .env with your API keys
    ```
 
-6. **Run the application**
+6. **Run the backend**
    ```bash
    python app/main.py
    ```
 
-The API will be available at `http://localhost:8000`
+7. **Setup and run the frontend** (optional)
+   ```bash
+   cd smart-task-planner-frontend
+   npm install
+   npm run dev
+   ```
+
+The API will be available at `http://localhost:8000`  
+The frontend will be available at `http://localhost:5173`
 
 ---
 
@@ -313,7 +329,7 @@ negotiation:
 
 ## 📦 Dependencies
 
-### Core Dependencies
+### Backend Dependencies
 
 | Package | Version | Purpose |
 |---------|---------|---------|
@@ -328,10 +344,28 @@ negotiation:
 | `matplotlib` | Latest | Visualization |
 | `structlog` | Latest | Structured logging |
 
+### Frontend Dependencies
+
+| Package | Version | Purpose |
+|---------|---------|---------|
+| `react` | ^19.2.0 | UI library |
+| `react-router-dom` | ^7.10.1 | Client-side routing |
+| `framer-motion` | ^12.23.25 | Animations |
+| `frappe-gantt` | ^1.0.4 | Gantt chart visualization |
+| `@syncfusion/ej2-react-gantt` | Latest | Advanced Gantt charts |
+| `vite` | ^7.2.4 | Build tool |
+
 ### Installation
 
+**Backend:**
 ```bash
 pip install -r requirements.txt
+```
+
+**Frontend:**
+```bash
+cd smart-task-planner-frontend
+npm install
 ```
 
 ---
@@ -369,6 +403,22 @@ Smart-Task-Planner/
 │
 ├── 📂 config/
 │   └── config.yaml             # Application configuration
+│
+├── 📂 smart-task-planner-frontend/  # React Frontend
+│   ├── 📂 src/
+│   │   ├── 📂 api/
+│   │   │   └── plannerApi.js   # API client
+│   │   ├── 📂 components/
+│   │   │   ├── GanttChart.jsx  # Gantt visualization
+│   │   │   └── TaskCalendar.jsx # Calendar view
+│   │   ├── 📂 pages/
+│   │   │   ├── Home.jsx        # Create plan page
+│   │   │   ├── PlanView.jsx    # View plan details
+│   │   │   └── Negotiation.jsx # Deadline negotiation
+│   │   ├── App.jsx             # Main app component
+│   │   └── main.jsx            # Entry point
+│   ├── package.json            # Frontend dependencies
+│   └── vite.config.js          # Vite configuration
 │
 ├── 📂 logs/                    # Application logs
 │
@@ -425,6 +475,24 @@ tasks = gantt_data.json()["tasks"]
 for task in tasks:
     print(f"{task['name']}: {task['start']} → {task['end']}")
 ```
+
+### Example 4: Using the Web Interface
+
+1. **Start both backend and frontend**
+   ```bash
+   # Terminal 1 - Backend
+   python app/main.py
+   
+   # Terminal 2 - Frontend
+   cd smart-task-planner-frontend
+   npm run dev
+   ```
+
+2. **Access the web interface**
+   - Navigate to `http://localhost:5173`
+   - Enter your project goal and constraints
+   - View interactive Gantt charts and calendar views
+   - Negotiate deadlines through the UI
 
 ---
 

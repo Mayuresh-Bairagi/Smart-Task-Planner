@@ -26,7 +26,12 @@ export async function getPlan(planId) {
   if (!res.ok) {
     const t = await res.text();
     console.error("Get Plan Error:", t);
-    throw new Error("Failed to fetch plan");
+    try {
+      const errorData = JSON.parse(t);
+      throw new Error(errorData.detail || "Failed to fetch plan");
+    } catch {
+      throw new Error(t || "Failed to fetch plan");
+    }
   }
 
   return res.json();
@@ -56,7 +61,12 @@ export async function negotiatePlan(planId, body) {
   if (!res.ok) {
     const t = await res.text();
     console.error("Negotiate Error:", t);
-    throw new Error("Negotiation failed");
+    try {
+      const errorData = JSON.parse(t);
+      throw new Error(errorData.detail || "Negotiation failed");
+    } catch {
+      throw new Error(t || "Negotiation failed");
+    }
   }
 
   return res.json();

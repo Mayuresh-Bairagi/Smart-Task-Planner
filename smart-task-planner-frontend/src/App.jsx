@@ -9,7 +9,6 @@ import Negotiation from "./pages/Negotiation";
 export default function App() {
   return (
     <BrowserRouter>
-      <h1>HI</h1>
       <Routes>
         {/* Home Page — create plan */}
         <Route path="/" element={<Home />} />

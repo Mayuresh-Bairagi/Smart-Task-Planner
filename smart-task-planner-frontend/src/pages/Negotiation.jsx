@@ -14,16 +14,18 @@ export default function Negotiation() {
     e.preventDefault();
     setLoading(true);
     setError(null);
+    setResult(null);
 
     try {
       const res = await negotiatePlan(planId, { deadline });
       setResult(res);
     } catch (err) {
       console.error(err);
-      setError("Negotiation failed. Check the deadline format (YYYY-MM-DD).");
+      const errorMsg = err.message || "Negotiation failed. Check the deadline format (YYYY-MM-DD).";
+      setError(errorMsg);
+    } finally {
+      setLoading(false);
     }
-
-    setLoading(false);
   }
 
   return (

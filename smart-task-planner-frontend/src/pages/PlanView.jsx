@@ -73,15 +73,15 @@ export default function PlanView() {
         ))}
       </div>
 
-      {/* GANTT CHART
+      {/* GANTT CHART */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         className="p-6 bg-white/80 backdrop-blur-xl rounded-xl shadow-xl border border-white/40"
       >
         <h2 className="text-2xl font-bold mb-4">📊 Timeline (Gantt Chart)</h2>
-        <GanttChart tasks={tasks} />
-      </motion.div> */}
+        <GanttChart tasks={tasks} holidays={plan.holidays || []} />
+      </motion.div>
 
       {/* CALENDAR */}
       <motion.div
@@ -106,7 +106,6 @@ export default function PlanView() {
             >
               <div className="flex justify-between items-center mb-3">
                 <h3 className="text-xl font-bold">{t.name}</h3>
-
                 <span
                   className={`px-3 py-1 rounded-full text-sm font-semibold ${
                     t.custom_class === "critical"
@@ -118,10 +117,13 @@ export default function PlanView() {
                 </span>
               </div>
 
+              {t.description && <p className="text-gray-700 mb-2">{t.description}</p>}
               <p><b>ID:</b> {t.id}</p>
               <p><b>Start:</b> {t.start}</p>
               <p><b>End:</b> {t.end}</p>
               <p><b>Dependencies:</b> {t.dependencies?.join(", ") || "None"}</p>
+              {t.confidence && <p><b>Confidence:</b> {(t.confidence * 100).toFixed(0)}%</p>}
+              {t.risks && <p className="text-red-600 text-sm mt-2"><b>Risks:</b> {t.risks}</p>}
 
               <div className="mt-3">
                 <p className="font-semibold">Progress:</p>
