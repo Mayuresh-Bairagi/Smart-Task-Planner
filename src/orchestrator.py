@@ -5,7 +5,9 @@ from expection.customExpection import smartTaskPlannerException
 
 from src.task_reasoning import TaskResoning   
 from src.scheduler import PERTScheduler       
-from src.negotiation_engine import NegotiationEngine  
+from src.negotiation_engine import NegotiationEngine
+from src.history_manager import HistoryManager
+from src.smart_negotiator import SmartNegotiator  
 
 
 class Orchestrator:
@@ -14,6 +16,8 @@ class Orchestrator:
             self.logger = CustomLogger().get_logger(__file__)
             self.task_reasoner = TaskResoning()
             self.negotiator = NegotiationEngine()
+            self.smart_negotiator = SmartNegotiator()
+            self.history_manager = HistoryManager()
             self.plans: Dict[str, Dict[str, Any]] = {}
             self.logger.info("Orchestrator initialized.")
         except Exception as e:
@@ -50,6 +54,17 @@ class Orchestrator:
                 "task_map": task_map,
             }
             self.plans[plan_id] = payload
+            
+            # Save to history
+            self.history_manager.save_plan(
+                plan_id=plan_id,
+                goal=goal,
+                constraints=constraints,
+                tasks=tasks["tasks"],
+                duration_days=scheduler_out.expected_calendar_days,
+                task_count=len(tasks["tasks"])
+            )
+            
             self.logger.info(f"Plan created: {plan_id}")
             return payload
 
@@ -59,31 +74,123 @@ class Orchestrator:
 
     def get_plan(self, plan_id: str):
         try:
-            return self.plans.get(plan_id)
+            plan = self.plans.get(plan_id)
+            if not plan:
+                self.logger.warning(f"Plan {plan_id} not found. Total plans in memory: {len(self.plans)}")
+            return plan
         except Exception as e:
             raise smartTaskPlannerException(f"Get plan failed: {e}")
 
     def negotiate(self, plan_id: str, deadline: str = None):
+        """Smart AI-powered deadline negotiation"""
         try:
             plan = self.get_plan(plan_id)
             if not plan:
-                raise smartTaskPlannerException("Plan not found")
+                available_plans = list(self.plans.keys())
+                self.logger.error(f"Plan {plan_id} not found. Available: {available_plans}")
+                raise ValueError(f"Plan not found. Available plans: {len(available_plans)}. Did you restart the server? Plans are stored in memory.")
 
-            task_out = plan["task_output"]
-            sched_out = plan["scheduler_output"]
-
-            feasibility = self.negotiator.analyze_feasibility(sched_out, deadline_iso=deadline)
-            hotspots = self.negotiator.detect_risk_hotspots(task_out, sched_out)
-            options = self.negotiator.propose_options(task_out, sched_out, feasibility)
-
-            result = {
-                "plan_id": plan_id,
-                "feasibility": feasibility,
-                "hotspots": hotspots,
-                "options": options
-            }
+            # Use new smart negotiator
+            result = self.smart_negotiator.analyze_deadline(plan, deadline)
+            result["plan_id"] = plan_id
+            
             plan["last_negotiation"] = result
             return result
 
         except Exception as e:
             raise smartTaskPlannerException(f"Negotiation failed: {e}")
+    
+    def get_similar_plans(self, goal: str):
+        """Get similar plans from history"""
+        try:
+            similar = self.history_manager.find_similar_plans(goal)
+            stats = self.history_manager.get_statistics()
+            return {
+                "similar_plans": similar,
+                "statistics": stats
+            }
+        except Exception as e:
+            raise smartTaskPlannerException(f"Failed to get similar plans: {e}")
+    
+    def update_task_progress(self, plan_id: str, task_id: str, progress: int):
+        """Update progress for a specific task"""
+        try:
+            plan = self.get_plan(plan_id)
+            if not plan:
+                available_plans = list(self.plans.keys())
+                self.logger.error(f"Plan {plan_id} not found. Available: {available_plans}")
+                raise smartTaskPlannerException(f"Plan not found. Available plans: {len(available_plans)}. Did you restart the server?")
+            
+            # Update progress in task_output
+            for task in plan["task_output"]["tasks"]:
+                if task["id"] == task_id:
+                    task["progress"] = progress
+                    break
+            
+            self.logger.info(f"Updated task {task_id} progress to {progress}%")
+            return {"success": True, "task_id": task_id, "progress": progress}
+        except Exception as e:
+            raise smartTaskPlannerException(f"Failed to update progress: {e}")
+    
+    def update_plan_details(self, plan_id: str, goal: str = None, constraints: str = None):
+        """Update plan goal and constraints"""
+        try:
+            plan = self.get_plan(plan_id)
+            if not plan:
+                raise smartTaskPlannerException("Plan not found")
+            
+            if goal:
+                plan["goal"] = goal
+            if constraints:
+                plan["constraints"] = constraints
+            
+            self.logger.info(f"Updated plan {plan_id} details")
+            return {"success": True, "plan_id": plan_id}
+        except Exception as e:
+            raise smartTaskPlannerException(f"Failed to update plan: {e}")
+    
+    def update_task_details(self, plan_id: str, task_id: str, name: str = None, description: str = None):
+        """Update task name and description"""
+        try:
+            plan = self.get_plan(plan_id)
+            if not plan:
+                raise smartTaskPlannerException("Plan not found")
+            
+            for task in plan["task_output"]["tasks"]:
+                if task["id"] == task_id:
+                    if name:
+                        task["title"] = name
+                    if description:
+                        task["description"] = description
+                    break
+            
+            self.logger.info(f"Updated task {task_id} details")
+            return {"success": True, "task_id": task_id}
+        except Exception as e:
+            raise smartTaskPlannerException(f"Failed to update task: {e}")
+    
+    def get_progress_summary(self, plan_id: str):
+        """Get overall progress summary"""
+        try:
+            plan = self.get_plan(plan_id)
+            if not plan:
+                raise smartTaskPlannerException("Plan not found")
+            
+            tasks = plan["task_output"]["tasks"]
+            total_tasks = len(tasks)
+            total_progress = sum(t.get("progress", 0) for t in tasks)
+            avg_progress = total_progress / total_tasks if total_tasks > 0 else 0
+            
+            completed = sum(1 for t in tasks if t.get("progress", 0) == 100)
+            in_progress = sum(1 for t in tasks if 0 < t.get("progress", 0) < 100)
+            not_started = sum(1 for t in tasks if t.get("progress", 0) == 0)
+            
+            return {
+                "total_tasks": total_tasks,
+                "avg_progress": round(avg_progress, 1),
+                "completed": completed,
+                "in_progress": in_progress,
+                "not_started": not_started
+            }
+        except Exception as e:
+            raise smartTaskPlannerException(f"Failed to get progress summary: {e}")

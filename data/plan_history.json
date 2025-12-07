@@ -1,0 +1,182 @@
+[
+  {
+    "plan_id": "d8b24934-b01b-4ceb-8a84-5438a0b0066a",
+    "goal": "make a mobile app",
+    "constraints": "",
+    "task_count": 9,
+    "duration_days": 88.0,
+    "created_at": "2025-12-07T12:45:32.066015",
+    "tasks_summary": [
+      {
+        "id": "T1",
+        "title": "Project Initiation & Requirements Gathering"
+      },
+      {
+        "id": "T2",
+        "title": "Market & Competitor Analysis"
+      },
+      {
+        "id": "T3",
+        "title": "UI/UX Design (Wireframes & Mockups)"
+      },
+      {
+        "id": "T4",
+        "title": "Technical Architecture & Stack Selection"
+      },
+      {
+        "id": "T5",
+        "title": "Frontend Development (Mobile UI)"
+      }
+    ]
+  },
+  {
+    "plan_id": "5b519890-757e-4961-a895-c7e051f448cc",
+    "goal": "make mobile app \n",
+    "constraints": "",
+    "task_count": 9,
+    "duration_days": 157.0,
+    "created_at": "2025-12-07T15:48:23.116534",
+    "tasks_summary": [
+      {
+        "id": "req_gathering",
+        "title": "Gather Requirements and Define Scope"
+      },
+      {
+        "id": "ui_ux_design",
+        "title": "Design UI/UX Wireframes and Prototypes"
+      },
+      {
+        "id": "technical_architecture",
+        "title": "Define Technical Architecture"
+      },
+      {
+        "id": "dev_environment_setup",
+        "title": "Set Up Development Environment"
+      },
+      {
+        "id": "core_feature_development",
+        "title": "Develop Core Features"
+      }
+    ]
+  },
+  {
+    "plan_id": "45fcc022-6a42-42e8-9262-dcab0ada20a8",
+    "goal": "make a mobile app in 20 days ",
+    "constraints": "",
+    "task_count": 10,
+    "duration_days": 32.0,
+    "created_at": "2025-12-07T15:56:28.645709",
+    "tasks_summary": [
+      {
+        "id": "T1",
+        "title": "Requirements Gathering & Scope Definition"
+      },
+      {
+        "id": "T2",
+        "title": "UI/UX Design"
+      },
+      {
+        "id": "T3",
+        "title": "Project Setup & CI/CD Configuration"
+      },
+      {
+        "id": "T4",
+        "title": "Backend API Development"
+      },
+      {
+        "id": "T5",
+        "title": "Mobile Frontend Core Development"
+      }
+    ]
+  },
+  {
+    "plan_id": "4f601a5a-8100-4a8e-a120-3bd4bcc9d4d9",
+    "goal": "write the book on ai ",
+    "constraints": "",
+    "task_count": 9,
+    "duration_days": 151.0,
+    "created_at": "2025-12-07T16:03:38.978400",
+    "tasks_summary": [
+      {
+        "id": "T1",
+        "title": "Define Book Objectives and Target Audience"
+      },
+      {
+        "id": "T2",
+        "title": "Conduct Market and Competitor Analysis"
+      },
+      {
+        "id": "T3",
+        "title": "Develop Detailed Outline and Chapter Structure"
+      },
+      {
+        "id": "T4",
+        "title": "Write First Draft of Chapters"
+      },
+      {
+        "id": "T5",
+        "title": "Internal Peer Review and Feedback Incorporation"
+      }
+    ]
+  },
+  {
+    "plan_id": "b0ab7a4c-8243-43f1-abe3-e979da1e35d5",
+    "goal": "make a pencil ",
+    "constraints": "",
+    "task_count": 9,
+    "duration_days": 36.0,
+    "created_at": "2025-12-07T16:07:59.128971",
+    "tasks_summary": [
+      {
+        "id": "T1",
+        "title": "Define Pencil Specifications"
+      },
+      {
+        "id": "T2",
+        "title": "Source Raw Materials"
+      },
+      {
+        "id": "T3",
+        "title": "Set Up Manufacturing Equipment"
+      },
+      {
+        "id": "T4",
+        "title": "Produce Graphite Cores"
+      },
+      {
+        "id": "T5",
+        "title": "Prepare Wood Slats"
+      }
+    ]
+  },
+  {
+    "plan_id": "4116b1ff-8b88-4511-a8cd-bdd16028bb7b",
+    "goal": "write the book on ai ",
+    "constraints": "",
+    "task_count": 9,
+    "duration_days": 151.0,
+    "created_at": "2025-12-07T16:12:11.496495",
+    "tasks_summary": [
+      {
+        "id": "T1",
+        "title": "Define Book Objectives and Target Audience"
+      },
+      {
+        "id": "T2",
+        "title": "Conduct Market and Competitor Analysis"
+      },
+      {
+        "id": "T3",
+        "title": "Develop Detailed Outline and Chapter Structure"
+      },
+      {
+        "id": "T4",
+        "title": "Write First Draft of Chapters"
+      },
+      {
+        "id": "T5",
+        "title": "Internal Peer Review and Feedback Incorporation"
+      }
+    ]
+  }
+]

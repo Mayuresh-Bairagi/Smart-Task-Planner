@@ -86,6 +86,85 @@ def negotiate(plan_id: str, body: NegotiateRequest):
         raise HTTPException(status_code=500, detail=str(e))
 
 
+@app.post("/suggestions")
+def get_suggestions(request: dict):
+    try:
+        goal = request.get("goal", "")
+        if not goal:
+            raise HTTPException(status_code=400, detail="Goal is required")
+        
+        result = orch.get_similar_plans(goal)
+        return result
+    except smartTaskPlannerException as e:
+        logger.error(f"Get suggestions failed: {e}")
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        logger.exception("Unhandled error in get_suggestions")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.put("/plan/{plan_id}/task/{task_id}/progress")
+def update_progress(plan_id: str, task_id: str, request: dict):
+    try:
+        progress = request.get("progress", 0)
+        if not 0 <= progress <= 100:
+            raise HTTPException(status_code=400, detail="Progress must be between 0 and 100")
+        
+        result = orch.update_task_progress(plan_id, task_id, progress)
+        return result
+    except smartTaskPlannerException as e:
+        logger.error(f"Update progress failed: {e}")
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        logger.exception("Unhandled error in update_progress")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.put("/plan/{plan_id}/details")
+def update_plan_details(plan_id: str, request: dict):
+    try:
+        goal = request.get("goal")
+        constraints = request.get("constraints")
+        
+        result = orch.update_plan_details(plan_id, goal, constraints)
+        return result
+    except smartTaskPlannerException as e:
+        logger.error(f"Update plan details failed: {e}")
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        logger.exception("Unhandled error in update_plan_details")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.put("/plan/{plan_id}/task/{task_id}/details")
+def update_task_details(plan_id: str, task_id: str, request: dict):
+    try:
+        name = request.get("name")
+        description = request.get("description")
+        
+        result = orch.update_task_details(plan_id, task_id, name, description)
+        return result
+    except smartTaskPlannerException as e:
+        logger.error(f"Update task details failed: {e}")
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        logger.exception("Unhandled error in update_task_details")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/plan/{plan_id}/progress")
+def get_progress_summary(plan_id: str):
+    try:
+        result = orch.get_progress_summary(plan_id)
+        return result
+    except smartTaskPlannerException as e:
+        logger.error(f"Get progress summary failed: {e}")
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        logger.exception("Unhandled error in get_progress_summary")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
 @app.get("/plan/{plan_id}/gantt")
 def get_gantt_data(plan_id: str):
     plan = orch.get_plan(plan_id)

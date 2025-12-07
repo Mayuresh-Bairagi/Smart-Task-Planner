@@ -1,0 +1,27 @@
+{"available_keys": ["GROQ_API_KEY", "GOOGLE_API_KEY"], "timestamp": "2025-12-07T07:14:16.786761Z", "level": "Environment variables validated successfully"}
+{"config_keys": ["llm"], "timestamp": "2025-12-07T07:14:16.788764Z", "level": "Configurations loaded successfully"}
+{"timestamp": "2025-12-07T07:14:16.788764Z", "level": "Loading LLM"}
+{"provider": "groq", "model": "openai/gpt-oss-120b", "temperature": 0.0, "max_tokens": 2048, "timestamp": "2025-12-07T07:14:16.789763Z", "level": "Loading LLM"}
+{"timestamp": "2025-12-07T07:14:17.079375Z", "level": "NegotiationEngine initialized."}
+{"timestamp": "2025-12-07T07:14:17.079375Z", "level": "Orchestrator initialized."}
+{"timestamp": "2025-12-07T07:15:27.025447Z", "level": "Running TaskReasoning for goal."}
+{"timestamp": "2025-12-07T07:15:27.036864Z", "level": "Prompt for task reasoning generated."}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{"timestamp": "2025-12-07T07:15:31.819240Z", "level": "Task reasoning completed successfully."}
+{"timestamp": "2025-12-07T07:15:31.820322Z", "level": "Running PERTScheduler."}
+{"timestamp": "2025-12-07T07:15:31.824265Z", "level": "Initializing PERTScheduler..."}
+{"timestamp": "2025-12-07T07:15:31.826311Z", "level": "Performing topological sort..."}
+{"timestamp": "2025-12-07T07:15:31.826311Z", "level": "Topological sort completed: ['T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'T8', 'T9']"}
+{"timestamp": "2025-12-07T07:15:31.827328Z", "level": "PERTScheduler initialized successfully."}
+{"timestamp": "2025-12-07T07:15:31.827328Z", "level": "Running PERTScheduler..."}
+{"timestamp": "2025-12-07T07:15:31.828268Z", "level": "Computing forward pass..."}
+{"timestamp": "2025-12-07T07:15:31.829267Z", "level": "Forward pass completed."}
+{"timestamp": "2025-12-07T07:15:31.829267Z", "level": "Computing backward pass..."}
+{"timestamp": "2025-12-07T07:15:31.830267Z", "level": "Backward pass completed."}
+{"timestamp": "2025-12-07T07:15:31.830267Z", "level": "Converting offsets to calendar dates..."}
+{"timestamp": "2025-12-07T07:15:31.832268Z", "level": "Calendar mapping completed."}
+{"timestamp": "2025-12-07T07:15:31.833262Z", "level": "Running Monte Carlo simulation..."}
+{"timestamp": "2025-12-07T07:15:32.065018Z", "level": "Monte Carlo simulation completed."}
+{"timestamp": "2025-12-07T07:15:32.065018Z", "level": "PERTScheduler completed successfully."}
+{"timestamp": "2025-12-07T07:15:32.067019Z", "level": "Saved plan d8b24934-b01b-4ceb-8a84-5438a0b0066a to history"}
+{"timestamp": "2025-12-07T07:15:32.067019Z", "level": "Plan created: d8b24934-b01b-4ceb-8a84-5438a0b0066a"}

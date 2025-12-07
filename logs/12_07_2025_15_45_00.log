@@ -1,0 +1,43 @@
+{"available_keys": ["GROQ_API_KEY", "GOOGLE_API_KEY"], "timestamp": "2025-12-07T10:15:01.517890Z", "level": "Environment variables validated successfully"}
+{"config_keys": ["llm"], "timestamp": "2025-12-07T10:15:01.529160Z", "level": "Configurations loaded successfully"}
+{"timestamp": "2025-12-07T10:15:01.532262Z", "level": "Loading LLM"}
+{"provider": "groq", "model": "openai/gpt-oss-120b", "temperature": 0.0, "max_tokens": 2048, "timestamp": "2025-12-07T10:15:01.539855Z", "level": "Loading LLM"}
+{"timestamp": "2025-12-07T10:15:04.239379Z", "level": "NegotiationEngine initialized."}
+{"timestamp": "2025-12-07T10:15:04.249843Z", "level": "Orchestrator initialized."}
+{"timestamp": "2025-12-07T10:18:16.689941Z", "level": "Running TaskReasoning for goal."}
+{"timestamp": "2025-12-07T10:18:16.726095Z", "level": "Prompt for task reasoning generated."}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{"timestamp": "2025-12-07T10:18:21.814526Z", "level": "Task reasoning completed successfully."}
+{"timestamp": "2025-12-07T10:18:21.815527Z", "level": "Running PERTScheduler."}
+{"timestamp": "2025-12-07T10:18:21.824460Z", "level": "Initializing PERTScheduler..."}
+{"timestamp": "2025-12-07T10:18:21.830790Z", "level": "Performing topological sort..."}
+{"timestamp": "2025-12-07T10:18:21.839306Z", "level": "Topological sort completed: ['req_gathering', 'ui_ux_design', 'technical_architecture', 'dev_environment_setup', 'core_feature_development', 'backend_integration', 'testing_quality_assurance', 'app_store_deployment', 'post_launch_support']"}
+{"timestamp": "2025-12-07T10:18:21.844400Z", "level": "PERTScheduler initialized successfully."}
+{"timestamp": "2025-12-07T10:18:21.845416Z", "level": "Running PERTScheduler..."}
+{"timestamp": "2025-12-07T10:18:21.846412Z", "level": "Computing forward pass..."}
+{"timestamp": "2025-12-07T10:18:21.848923Z", "level": "Forward pass completed."}
+{"timestamp": "2025-12-07T10:18:21.859019Z", "level": "Computing backward pass..."}
+{"timestamp": "2025-12-07T10:18:21.862327Z", "level": "Backward pass completed."}
+{"timestamp": "2025-12-07T10:18:21.863324Z", "level": "Converting offsets to calendar dates..."}
+{"timestamp": "2025-12-07T10:18:21.873548Z", "level": "Calendar mapping completed."}
+{"timestamp": "2025-12-07T10:18:21.880057Z", "level": "Running Monte Carlo simulation..."}
+{"timestamp": "2025-12-07T10:18:23.113535Z", "level": "Monte Carlo simulation completed."}
+{"timestamp": "2025-12-07T10:18:23.114536Z", "level": "PERTScheduler completed successfully."}
+{"timestamp": "2025-12-07T10:18:23.120291Z", "level": "Saved plan 5b519890-757e-4961-a895-c7e051f448cc to history"}
+{"timestamp": "2025-12-07T10:18:23.121285Z", "level": "Plan created: 5b519890-757e-4961-a895-c7e051f448cc"}
+{"timestamp": "2025-12-07T10:18:36.101437Z", "level": "Updated task req_gathering progress to 3%"}
+{"timestamp": "2025-12-07T10:18:37.541042Z", "level": "Updated task req_gathering progress to 5%"}
+{"timestamp": "2025-12-07T10:18:38.865525Z", "level": "Updated task req_gathering progress to 3%"}
+{"timestamp": "2025-12-07T10:18:39.647515Z", "level": "Updated task req_gathering progress to 49%"}
+{"timestamp": "2025-12-07T10:18:39.880082Z", "level": "Updated task req_gathering progress to 49%"}
+{"timestamp": "2025-12-07T10:18:40.079033Z", "level": "Updated task req_gathering progress to 49%"}
+{"timestamp": "2025-12-07T10:18:40.347135Z", "level": "Updated task req_gathering progress to 49%"}
+{"timestamp": "2025-12-07T10:18:49.324621Z", "level": "Updated task post_launch_support progress to 36%"}
+{"timestamp": "2025-12-07T10:18:49.967691Z", "level": "Updated task post_launch_support progress to 48%"}
+{"timestamp": "2025-12-07T10:18:50.200401Z", "level": "Updated task post_launch_support progress to 48%"}
+{"timestamp": "2025-12-07T10:18:50.326912Z", "level": "Updated task post_launch_support progress to 48%"}
+{"timestamp": "2025-12-07T10:18:59.891896Z", "level": "Running feasibility analysis."}
+{"timestamp": "2025-12-07T10:18:59.892897Z", "level": "Feasibility: not_feasible"}
+{"timestamp": "2025-12-07T10:18:59.893899Z", "level": "Detecting risk hotspots."}
+{"timestamp": "2025-12-07T10:18:59.894901Z", "level": "Risk detection failed: 'dict' object has no attribute 'tasks'"}
+{"timestamp": "2025-12-07T10:18:59.903765Z", "level": "Negotiation failed: Error in [D:\\Project\\Smart-Task-Planner\\src\\orchestrator.py] at line [89]\nMessage:Negotiation failed: Error in [D:\\Project\\Smart-Task-Planner\\src\\negotiation_engine.py] at line [52]\nMessage:Risk detection failed: 'dict' object has no attribute 'tasks'\nTraceback:Traceback (most recent call last):\n  File \"D:\\Project\\Smart-Task-Planner\\src\\negotiation_engine.py\", line 52, in detect_risk_hotspots\n    for t in task_reasoning_output.tasks:\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'dict' object has no attribute 'tasks'\n\nTraceback:Traceback (most recent call last):\n  File \"D:\\Project\\Smart-Task-Planner\\src\\negotiation_engine.py\", line 52, in detect_risk_hotspots\n    for t in task_reasoning_output.tasks:\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'dict' object has no attribute 'tasks'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"D:\\Project\\Smart-Task-Planner\\src\\orchestrator.py\", line 89, in negotiate\n    hotspots = self.negotiator.detect_risk_hotspots(task_out, sched_out)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Project\\Smart-Task-Planner\\src\\negotiation_engine.py\", line 87, in detect_risk_hotspots\n    raise smartTaskPlannerException(f\"Risk detection failed: {e}\")\nexpection.customExpection.smartTaskPlannerException: Error in [D:\\Project\\Smart-Task-Planner\\src\\negotiation_engine.py] at line [52]\nMessage:Risk detection failed: 'dict' object has no attribute 'tasks'\nTraceback:Traceback (most recent call last):\n  File \"D:\\Project\\Smart-Task-Planner\\src\\negotiation_engine.py\", line 52, in detect_risk_hotspots\n    for t in task_reasoning_output.tasks:\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'dict' object has no attribute 'tasks'\n\n"}

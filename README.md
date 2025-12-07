@@ -43,6 +43,7 @@
 ### Why Smart Task Planner?
 
 - 🤖 **AI-Driven Task Breakdown**: Automatically decomposes goals into structured tasks with dependencies
+- ⚔️ **AI Battle Mode**: Multiple AI models compete to create the best plan, judged by AI
 - 📊 **Critical Path Analysis**: Identifies bottlenecks and critical tasks using CPM algorithms
 - 🎲 **Monte Carlo Simulation**: Provides probabilistic project completion estimates
 - 🤝 **Intelligent Negotiation**: AI-powered deadline negotiation with feasibility analysis
@@ -57,6 +58,7 @@
 | Feature | Description | Status |
 |---------|-------------|--------|
 | 🧠 **AI Task Reasoning** | LLM-powered task decomposition with rationale and risk analysis | ✅ Active |
+| ⚔️ **AI Battle Mode** | Multiple AI models compete, judge picks the best plan | ✅ Active |
 | 📈 **CPM Scheduling** | Critical Path Method with slack time calculation | ✅ Active |
 | 🎯 **Dependency Management** | Automatic task dependency resolution and validation | ✅ Active |
 | 📊 **Monte Carlo Analysis** | Statistical project duration forecasting | ✅ Active |
@@ -99,6 +101,7 @@
 │   breakdown │ │ • Calendar   │ │   analysis          │
 │ • Risk      │ │ • Monte      │ │ • Alternative       │
 │   analysis  │ │   Carlo      │ │   suggestions       │
+│ • AI Battle │ │              │ │                     │
 └─────────────┘ └──────────────┘ └─────────────────────┘
        │              │              │
        └──────────────┴──────────────┘
@@ -243,6 +246,7 @@ print(plan_details.json())
 | Method | Endpoint | Description | Request Body | Response |
 |--------|----------|-------------|--------------|----------|
 | 🟢 POST | `/plan` | Create new project plan | `CreatePlanRequest` | `CreatePlanResponse` |
+| ⚔️ POST | `/battle` | AI Battle: Multiple models compete | `BattleRequest` | Battle results with winner |
 | 🔵 GET | `/plan/{plan_id}` | Retrieve plan details | - | Plan object with schedule |
 | 🟡 POST | `/plan/{plan_id}/negotiate` | Negotiate deadline | `NegotiateRequest` | Negotiation result |
 | 🟣 GET | `/plan/{plan_id}/gantt` | Get Gantt chart data | - | Gantt visualization data |
@@ -382,7 +386,8 @@ Smart-Task-Planner/
 │   ├── orchestrator.py         # Main orchestration logic
 │   ├── task_reasoning.py       # LLM-based task decomposition
 │   ├── scheduler.py            # CPM & Monte Carlo scheduling
-│   └── negotiation_engine.py   # Deadline negotiation logic
+│   ├── negotiation_engine.py   # Deadline negotiation logic
+│   └── ai_battle.py            # AI Battle: Multi-model competition
 │
 ├── 📂 model/
 │   └── model.py                # Pydantic data models
@@ -476,7 +481,22 @@ for task in tasks:
     print(f"{task['name']}: {task['start']} → {task['end']}")
 ```
 
-### Example 4: Using the Web Interface
+### Example 4: AI Battle Mode
+
+```python
+# Let multiple AI models compete to create the best plan
+battle_response = requests.post("http://localhost:8000/battle", json={
+    "goal": "Launch a SaaS product for project management",
+    "constraints": "Budget: $50k, Timeline: 90 days, Team: 5 people"
+})
+
+battle_result = battle_response.json()
+print(f"Winner: {battle_result['winner']['winner']}")
+print(f"Reasoning: {battle_result['winner']['reasoning']}")
+print(f"Competitors: {battle_result['total_competitors']}")
+```
+
+### Example 5: Using the Web Interface
 
 1. **Start both backend and frontend**
    ```bash

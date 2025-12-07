@@ -1,0 +1,41 @@
+{"available_keys": ["GROQ_API_KEY", "GOOGLE_API_KEY"], "timestamp": "2025-12-07T10:32:41.146158Z", "level": "Environment variables validated successfully"}
+{"config_keys": ["llm"], "timestamp": "2025-12-07T10:32:41.152239Z", "level": "Configurations loaded successfully"}
+{"timestamp": "2025-12-07T10:32:41.153215Z", "level": "Loading LLM"}
+{"provider": "groq", "model": "openai/gpt-oss-120b", "temperature": 0.0, "max_tokens": 2048, "timestamp": "2025-12-07T10:32:41.154243Z", "level": "Loading LLM"}
+{"timestamp": "2025-12-07T10:32:42.382008Z", "level": "NegotiationEngine initialized."}
+{"available_keys": ["GROQ_API_KEY", "GOOGLE_API_KEY"], "timestamp": "2025-12-07T10:32:42.387391Z", "level": "Environment variables validated successfully"}
+{"config_keys": ["llm"], "timestamp": "2025-12-07T10:32:42.397087Z", "level": "Configurations loaded successfully"}
+{"timestamp": "2025-12-07T10:32:42.398081Z", "level": "Loading LLM"}
+{"provider": "groq", "model": "openai/gpt-oss-120b", "temperature": 0.0, "max_tokens": 2048, "timestamp": "2025-12-07T10:32:42.399072Z", "level": "Loading LLM"}
+{"timestamp": "2025-12-07T10:32:42.533277Z", "level": "Orchestrator initialized."}
+{"timestamp": "2025-12-07T10:33:10.036265Z", "level": "Plan 45fcc022-6a42-42e8-9262-dcab0ada20a8 not found. Total plans in memory: 0"}
+{"timestamp": "2025-12-07T10:33:10.037273Z", "level": "Plan 45fcc022-6a42-42e8-9262-dcab0ada20a8 not found. Available: []"}
+{"timestamp": "2025-12-07T10:33:10.040351Z", "level": "Negotiation failed: Error in [D:\\Project\\Smart-Task-Planner\\src\\orchestrator.py] at line [91]\nMessage:Negotiation failed: Plan not found. Available plans: 0. Did you restart the server? Plans are stored in memory.\nTraceback:Traceback (most recent call last):\n  File \"D:\\Project\\Smart-Task-Planner\\src\\orchestrator.py\", line 91, in negotiate\n    raise ValueError(f\"Plan not found. Available plans: {len(available_plans)}. Did you restart the server? Plans are stored in memory.\")\nValueError: Plan not found. Available plans: 0. Did you restart the server? Plans are stored in memory.\n"}
+{"timestamp": "2025-12-07T10:33:12.833792Z", "level": "Plan 45fcc022-6a42-42e8-9262-dcab0ada20a8 not found. Total plans in memory: 0"}
+{"timestamp": "2025-12-07T10:33:12.840891Z", "level": "Plan 45fcc022-6a42-42e8-9262-dcab0ada20a8 not found. Total plans in memory: 0"}
+{"timestamp": "2025-12-07T10:33:31.459041Z", "level": "Running TaskReasoning for goal."}
+{"timestamp": "2025-12-07T10:33:31.473617Z", "level": "Prompt for task reasoning generated."}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{"timestamp": "2025-12-07T10:33:37.773269Z", "level": "Task reasoning completed successfully."}
+{"timestamp": "2025-12-07T10:33:37.777958Z", "level": "Running PERTScheduler."}
+{"timestamp": "2025-12-07T10:33:37.787658Z", "level": "Initializing PERTScheduler..."}
+{"timestamp": "2025-12-07T10:33:37.801384Z", "level": "Performing topological sort..."}
+{"timestamp": "2025-12-07T10:33:37.803142Z", "level": "Topological sort completed: ['T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'T8', 'T9']"}
+{"timestamp": "2025-12-07T10:33:37.805014Z", "level": "PERTScheduler initialized successfully."}
+{"timestamp": "2025-12-07T10:33:37.806724Z", "level": "Running PERTScheduler..."}
+{"timestamp": "2025-12-07T10:33:37.810321Z", "level": "Computing forward pass..."}
+{"timestamp": "2025-12-07T10:33:37.812009Z", "level": "Forward pass completed."}
+{"timestamp": "2025-12-07T10:33:37.813787Z", "level": "Computing backward pass..."}
+{"timestamp": "2025-12-07T10:33:37.815481Z", "level": "Backward pass completed."}
+{"timestamp": "2025-12-07T10:33:37.816492Z", "level": "Converting offsets to calendar dates..."}
+{"timestamp": "2025-12-07T10:33:37.823568Z", "level": "Calendar mapping completed."}
+{"timestamp": "2025-12-07T10:33:37.832248Z", "level": "Running Monte Carlo simulation..."}
+{"timestamp": "2025-12-07T10:33:38.973706Z", "level": "Monte Carlo simulation completed."}
+{"timestamp": "2025-12-07T10:33:38.976310Z", "level": "PERTScheduler completed successfully."}
+{"timestamp": "2025-12-07T10:33:38.982393Z", "level": "Saved plan 4f601a5a-8100-4a8e-a120-3bd4bcc9d4d9 to history"}
+{"timestamp": "2025-12-07T10:33:38.984999Z", "level": "Plan created: 4f601a5a-8100-4a8e-a120-3bd4bcc9d4d9"}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{"timestamp": "2025-12-07T10:33:56.240241Z", "level": "AI Analysis: Feasible=False, Confidence=12%"}
+{"timestamp": "2025-12-07T10:35:19.002125Z", "level": "Updated task T7 progress to 8%"}
+{"timestamp": "2025-12-07T10:35:22.012890Z", "level": "Updated task T1 progress to 30%"}
+{"timestamp": "2025-12-07T10:35:22.344669Z", "level": "Updated task T1 progress to 30%"}

@@ -1,0 +1,22 @@
+{"available_keys": ["GROQ_API_KEY", "GOOGLE_API_KEY"], "timestamp": "2025-12-07T10:10:48.042109Z", "level": "Environment variables validated successfully"}
+{"config_keys": ["llm"], "timestamp": "2025-12-07T10:10:48.045155Z", "level": "Configurations loaded successfully"}
+{"timestamp": "2025-12-07T10:10:48.046161Z", "level": "Loading LLM"}
+{"provider": "groq", "model": "openai/gpt-oss-120b", "temperature": 0.0, "max_tokens": 2048, "timestamp": "2025-12-07T10:10:48.046161Z", "level": "Loading LLM"}
+{"timestamp": "2025-12-07T10:10:48.472113Z", "level": "NegotiationEngine initialized."}
+{"timestamp": "2025-12-07T10:10:48.634875Z", "level": "Orchestrator initialized."}
+{"timestamp": "2025-12-07T10:11:26.626620Z", "level": "\ud83d\udd25 Starting AI Battle for: Make a movie on me "}
+{"timestamp": "2025-12-07T10:11:26.628639Z", "level": "\ud83d\udd25 AI BATTLE STARTED for goal: Make a movie on me "}
+{"timestamp": "2025-12-07T10:11:26.629618Z", "level": "\u2694\ufe0f groq_llama is generating plan..."}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{"timestamp": "2025-12-07T10:11:28.429163Z", "level": "\u2694\ufe0f groq_mixtral is generating plan..."}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+{"timestamp": "2025-12-07T10:11:28.486701Z", "level": "\u274c groq_mixtral failed: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}"}
+{"timestamp": "2025-12-07T10:11:28.486701Z", "level": "\u2694\ufe0f gemini is generating plan..."}
+Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 2.0 seconds as it raised NotFound: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods..
+Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 4.0 seconds as it raised NotFound: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods..
+Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 8.0 seconds as it raised NotFound: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods..
+Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 16.0 seconds as it raised NotFound: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods..
+Retrying langchain_google_genai.chat_models._chat_with_retry.<locals>._chat_with_retry in 32.0 seconds as it raised NotFound: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods..
+{"timestamp": "2025-12-07T10:12:31.447689Z", "level": "\u274c gemini failed: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{"timestamp": "2025-12-07T10:12:32.248745Z", "level": "\ud83c\udfc6 WINNER: groq_llama"}

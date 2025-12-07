@@ -72,45 +72,86 @@ export default function Negotiation() {
 
       {/* Results Section */}
       {result && (
-        <div className="space-y-10">
+        <div className="space-y-6">
 
-          {/* Feasibility */}
-          <div className="bg-white p-6 rounded-xl shadow space-y-2 border">
-            <h2 className="text-2xl font-bold">Feasibility</h2>
-            <p><b>Can meet deadline:</b> {result.feasibility.feasible ? "Yes" : "No"}</p>
-            <p><b>Earliest possible:</b> {result.feasibility.earliest_end}</p>
-            <p><b>Requested deadline:</b> {deadline}</p>
+          {/* AI Verdict */}
+          <div className={`p-8 rounded-xl shadow-lg border-4 ${
+            result.feasible 
+              ? "bg-green-50 border-green-500" 
+              : "bg-red-50 border-red-500"
+          }`}>
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-3xl font-bold">
+                {result.feasible ? "✅ Deadline Achievable" : "⚠️ Deadline Too Tight"}
+              </h2>
+              <div className="text-right">
+                <p className="text-sm text-gray-600">AI Confidence</p>
+                <p className="text-4xl font-bold text-blue-600">{result.confidence}%</p>
+              </div>
+            </div>
+            
+            <div className="bg-white p-4 rounded-lg mb-4">
+              <p className="text-lg">{result.analysis}</p>
+            </div>
+
+            {result.current_schedule && (
+              <div className="grid grid-cols-3 gap-4 text-center">
+                <div className="bg-white p-3 rounded">
+                  <p className="text-sm text-gray-600">Current End Date</p>
+                  <p className="font-bold">{result.current_schedule.end}</p>
+                </div>
+                <div className="bg-white p-3 rounded">
+                  <p className="text-sm text-gray-600">Requested Deadline</p>
+                  <p className="font-bold">{result.requested_deadline || "Not set"}</p>
+                </div>
+                <div className="bg-white p-3 rounded">
+                  <p className="text-sm text-gray-600">Duration</p>
+                  <p className="font-bold">{result.current_schedule.duration_days} days</p>
+                </div>
+              </div>
+            )}
           </div>
 
-          {/* Risk Hotspots */}
-          <div className="bg-white p-6 rounded-xl shadow border">
-            <h2 className="text-2xl font-bold mb-3">Risk Hotspots</h2>
+          {/* Risks */}
+          {result.risks && result.risks.length > 0 && (
+            <div className="bg-white p-6 rounded-xl shadow border">
+              <h2 className="text-2xl font-bold mb-3 text-red-600">🚨 Key Risks</h2>
+              <ul className="space-y-2">
+                {result.risks.map((risk, i) => (
+                  <li key={i} className="flex items-start">
+                    <span className="text-red-500 mr-2">•</span>
+                    <span>{risk}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
-            {result.hotspots.length === 0 && <p>No major risks detected.</p>}
+          {/* Recommendations */}
+          {result.recommendations && result.recommendations.length > 0 && (
+            <div className="bg-white p-6 rounded-xl shadow border">
+              <h2 className="text-2xl font-bold mb-3 text-blue-600">💡 AI Recommendations</h2>
+              <ul className="space-y-3">
+                {result.recommendations.map((rec, i) => (
+                  <li key={i} className="flex items-start bg-blue-50 p-3 rounded">
+                    <span className="text-blue-600 font-bold mr-2">{i + 1}.</span>
+                    <span>{rec}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
-            <ul className="list-disc ml-6 space-y-1">
-              {result.hotspots.map((h, i) => (
-                <li key={i}>
-                  <b>{h.task_id}:</b> {h.issue}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Proposed Options */}
-          <div className="bg-white p-6 rounded-xl shadow border">
-            <h2 className="text-2xl font-bold mb-3">Suggested Options</h2>
-
-            {result.options.length === 0 && <p>No suggestions available.</p>}
-
-            <ul className="list-disc ml-6 space-y-2">
-              {result.options.map((o, i) => (
-                <li key={i}>
-                  <b>{o.type}:</b> {o.message}
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Alternative Deadline */}
+          {result.alternative_deadline && (
+            <div className="bg-yellow-50 p-6 rounded-xl shadow border-2 border-yellow-400">
+              <h2 className="text-2xl font-bold mb-2 text-yellow-800">📅 Suggested Alternative</h2>
+              <p className="text-lg">Earliest realistic completion: <span className="font-bold">{result.alternative_deadline}</span></p>
+              {result.time_savings_possible && (
+                <p className="text-sm text-gray-600 mt-2">💡 {result.time_savings_possible}</p>
+              )}
+            </div>
+          )}
 
         </div>
       )}

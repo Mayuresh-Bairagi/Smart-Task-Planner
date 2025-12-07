@@ -1,0 +1,11 @@
+{"available_keys": ["GROQ_API_KEY", "GOOGLE_API_KEY"], "timestamp": "2025-12-07T10:29:19.227320Z", "level": "Environment variables validated successfully"}
+{"config_keys": ["llm"], "timestamp": "2025-12-07T10:29:19.234943Z", "level": "Configurations loaded successfully"}
+{"timestamp": "2025-12-07T10:29:19.236212Z", "level": "Loading LLM"}
+{"provider": "groq", "model": "openai/gpt-oss-120b", "temperature": 0.0, "max_tokens": 2048, "timestamp": "2025-12-07T10:29:19.239277Z", "level": "Loading LLM"}
+{"timestamp": "2025-12-07T10:29:20.464267Z", "level": "NegotiationEngine initialized."}
+{"available_keys": ["GROQ_API_KEY", "GOOGLE_API_KEY"], "timestamp": "2025-12-07T10:29:20.468394Z", "level": "Environment variables validated successfully"}
+{"config_keys": ["llm"], "timestamp": "2025-12-07T10:29:20.505067Z", "level": "Configurations loaded successfully"}
+{"timestamp": "2025-12-07T10:29:20.509120Z", "level": "Loading LLM"}
+{"provider": "groq", "model": "openai/gpt-oss-120b", "temperature": 0.0, "max_tokens": 2048, "timestamp": "2025-12-07T10:29:20.511163Z", "level": "Loading LLM"}
+{"timestamp": "2025-12-07T10:29:20.639030Z", "level": "Orchestrator initialized."}
+{"timestamp": "2025-12-07T10:31:56.550841Z", "level": "Negotiation failed: Error in [D:\\Project\\Smart-Task-Planner\\src\\orchestrator.py] at line [86]\nMessage:Negotiation failed: Plan not found\nTraceback:Traceback (most recent call last):\n  File \"D:\\Project\\Smart-Task-Planner\\src\\orchestrator.py\", line 86, in negotiate\n    raise ValueError(\"Plan not found\")\nValueError: Plan not found\n"}

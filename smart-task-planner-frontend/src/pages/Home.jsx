@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { createPlan } from "../api/plannerApi";
+import { useState, useEffect } from "react";
+import { createPlan, getSuggestions } from "../api/plannerApi";
 
 export default function Home() {
   const [goal, setGoal] = useState("");
@@ -7,6 +7,27 @@ export default function Home() {
   const [startDate, setStartDate] = useState("2025-12-01");
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [suggestions, setSuggestions] = useState(null);
+  const [showSuggestions, setShowSuggestions] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (goal.trim().length > 10) {
+        fetchSuggestions();
+      }
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, [goal]);
+
+  const fetchSuggestions = async () => {
+    try {
+      const result = await getSuggestions(goal);
+      setSuggestions(result);
+      setShowSuggestions(result.similar_plans.length > 0);
+    } catch (err) {
+      console.error("Failed to fetch suggestions", err);
+    }
+  };
 
   const handleSubmit = async () => {
     if (!goal.trim()) {
@@ -40,18 +61,38 @@ export default function Home() {
     <div className="min-h-screen bg-gray-50 p-10 flex flex-col items-center">
       <div className="max-w-3xl w-full bg-white shadow-lg rounded-xl p-8 space-y-6">
         <h1 className="text-4xl font-bold text-center text-blue-700">
-          Smart Task Planner
+          🎯 Smart Task Planner
         </h1>
+        <p className="text-center text-gray-600">AI-powered project planning with historical insights</p>
 
-        {error && <div className="text-red-600">{error}</div>}
+        {error && <div className="text-red-600 mt-4">{error}</div>}
 
-        <textarea
-          className="w-full p-4 border rounded-lg"
-          rows={4}
-          placeholder="Enter your project goal..."
-          value={goal}
-          onChange={(e) => setGoal(e.target.value)}
-        />
+        <div className="relative">
+          <textarea
+            className="w-full p-4 border rounded-lg"
+            rows={4}
+            placeholder="Enter your project goal... (AI will suggest similar projects)"
+            value={goal}
+            onChange={(e) => setGoal(e.target.value)}
+          />
+          
+          {showSuggestions && suggestions && (
+            <div className="mt-3 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+              <h3 className="font-bold text-blue-800 mb-2">💡 AI Suggestions from {suggestions.statistics.total_plans} past projects:</h3>
+              
+              {suggestions.similar_plans.map((plan, idx) => (
+                <div key={idx} className="mb-2 p-3 bg-white rounded border">
+                  <p className="font-semibold text-sm">{plan.goal}</p>
+                  <p className="text-xs text-gray-600">📅 {plan.duration_days} days • 📋 {plan.task_count} tasks</p>
+                </div>
+              ))}
+              
+              <p className="text-xs text-gray-500 mt-2">
+                📊 Average: {Math.round(suggestions.statistics.avg_duration)} days, {Math.round(suggestions.statistics.avg_tasks)} tasks
+              </p>
+            </div>
+          )}
+        </div>
 
         <input
           className="w-full p-3 border rounded-lg"

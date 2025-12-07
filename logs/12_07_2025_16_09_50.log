@@ -1,0 +1,10 @@
+{"available_keys": ["GROQ_API_KEY", "GOOGLE_API_KEY"], "timestamp": "2025-12-07T10:39:50.552978Z", "level": "Environment variables validated successfully"}
+{"config_keys": ["llm"], "timestamp": "2025-12-07T10:39:50.556557Z", "level": "Configurations loaded successfully"}
+{"timestamp": "2025-12-07T10:39:50.557557Z", "level": "Loading LLM"}
+{"provider": "groq", "model": "openai/gpt-oss-120b", "temperature": 0.0, "max_tokens": 2048, "timestamp": "2025-12-07T10:39:50.557557Z", "level": "Loading LLM"}
+{"timestamp": "2025-12-07T10:39:51.004646Z", "level": "NegotiationEngine initialized."}
+{"available_keys": ["GROQ_API_KEY", "GOOGLE_API_KEY"], "timestamp": "2025-12-07T10:39:51.006162Z", "level": "Environment variables validated successfully"}
+{"config_keys": ["llm"], "timestamp": "2025-12-07T10:39:51.037786Z", "level": "Configurations loaded successfully"}
+{"timestamp": "2025-12-07T10:39:51.038790Z", "level": "Loading LLM"}
+{"provider": "groq", "model": "openai/gpt-oss-120b", "temperature": 0.0, "max_tokens": 2048, "timestamp": "2025-12-07T10:39:51.038790Z", "level": "Loading LLM"}
+{"timestamp": "2025-12-07T10:39:51.074704Z", "level": "Orchestrator initialized."}

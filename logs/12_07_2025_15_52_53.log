@@ -1,0 +1,7 @@
+{"available_keys": ["GROQ_API_KEY", "GOOGLE_API_KEY"], "timestamp": "2025-12-07T10:22:53.598008Z", "level": "Environment variables validated successfully"}
+{"config_keys": ["llm"], "timestamp": "2025-12-07T10:22:53.604249Z", "level": "Configurations loaded successfully"}
+{"timestamp": "2025-12-07T10:22:53.605374Z", "level": "Loading LLM"}
+{"provider": "groq", "model": "openai/gpt-oss-120b", "temperature": 0.0, "max_tokens": 2048, "timestamp": "2025-12-07T10:22:53.607477Z", "level": "Loading LLM"}
+{"timestamp": "2025-12-07T10:22:55.097726Z", "level": "NegotiationEngine initialized."}
+{"timestamp": "2025-12-07T10:22:55.099648Z", "level": "Orchestrator initialized."}
+{"timestamp": "2025-12-07T10:23:46.186630Z", "level": "Negotiation failed: Error in [D:\\Project\\Smart-Task-Planner\\src\\orchestrator.py] at line [83]\nMessage:Negotiation failed: 'NoneType' object has no attribute 'tb_frame'\nTraceback:Traceback (most recent call last):\n  File \"D:\\Project\\Smart-Task-Planner\\src\\orchestrator.py\", line 83, in negotiate\n    raise smartTaskPlannerException(\"Plan not found\")\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Project\\Smart-Task-Planner\\expection\\customExpection.py\", line 9, in __init__\n    self.file_name = exc_tb.tb_frame.f_code.co_filename\n                     ^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'tb_frame'\n"}

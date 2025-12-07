@@ -49,36 +49,53 @@ class NegotiationEngine:
             hotspots = []
             mc = scheduler_output.monte_carlo or {}
             critical_frac = mc.get("task_critical_fraction", {})
-            for t in task_reasoning_output.tasks:
+            
+            # Handle dict or object
+            tasks = task_reasoning_output.get("tasks", []) if isinstance(task_reasoning_output, dict) else task_reasoning_output.tasks
+            
+            for t in tasks:
+                # Handle dict or object
+                if isinstance(t, dict):
+                    task_id = t.get("id")
+                    title = t.get("title", "")
+                    confidence = t.get("confidence", 1.0)
+                    duration = t.get("duration_days", {})
+                    a = duration.get("optimistic", 0) if isinstance(duration, dict) else getattr(duration, "optimistic", 0)
+                    m = duration.get("most_likely", 0) if isinstance(duration, dict) else getattr(duration, "most_likely", 0)
+                    b = duration.get("pessimistic", 0) if isinstance(duration, dict) else getattr(duration, "pessimistic", 0)
+                else:
+                    task_id = t.id
+                    title = t.title
+                    confidence = getattr(t, "confidence", 1.0)
+                    a = t.duration_days.optimistic
+                    m = t.duration_days.most_likely
+                    b = t.duration_days.pessimistic
                 score = 0
                 reasons = []
 
-                if getattr(t, "confidence", 1.0) < 0.75:
+                if confidence < 0.75:
                     score += 1
                     reasons.append("low_confidence")
 
-                a = t.duration_days.optimistic
-                m = t.duration_days.most_likely
-                b = t.duration_days.pessimistic
                 if (b - a) > 0.5 * max(1.0, m):
                     score += 1
                     reasons.append("high_variance")
 
-                if t.id in scheduler_output.critical_path:
+                if task_id in scheduler_output.critical_path:
                     score += 1
                     reasons.append("on_critical_path")
 
-                if critical_frac.get(t.id, 0) > 0.25:
+                if critical_frac.get(task_id, 0) > 0.25:
                     score += 1
                     reasons.append("frequently_critical")
 
                 if score > 0:
                     hotspots.append({
-                        "task_id": t.id,
-                        "title": t.title,
+                        "task_id": task_id,
+                        "title": title,
                         "score": score,
                         "reasons": reasons,
-                        "confidence": getattr(t, "confidence", None)
+                        "confidence": confidence
                     })
             self.logger.info(f"Found {len(hotspots)} hotspots.")
             return hotspots
@@ -91,10 +108,20 @@ class NegotiationEngine:
             self.logger.info("Proposing negotiation options.")
             options = []
 
+            # Handle dict or object
+            tasks = task_reasoning_output.get("tasks", []) if isinstance(task_reasoning_output, dict) else task_reasoning_output.tasks
+
             minimal_cut = []
-            for t in task_reasoning_output.tasks:
-                if t.id not in scheduler_output.critical_path and getattr(t, "confidence", 1.0) < 0.85:
-                    minimal_cut.append(t.id)
+            for t in tasks:
+                # Handle dict or object
+                if isinstance(t, dict):
+                    task_id = t.get("id")
+                    confidence = t.get("confidence", 1.0)
+                else:
+                    task_id = t.id
+                    confidence = getattr(t, "confidence", 1.0)
+                if task_id not in scheduler_output.critical_path and confidence < 0.85:
+                    minimal_cut.append(task_id)
             options.append({
                 "id": "opt_scope_cut",
                 "title": "Reduce scope (minimal cut)",

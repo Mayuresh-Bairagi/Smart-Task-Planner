@@ -124,3 +124,53 @@ HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200
 {"timestamp": "2025-12-07T06:25:24.495430Z", "level": "Monte Carlo simulation completed."}
 {"timestamp": "2025-12-07T06:25:24.497939Z", "level": "PERTScheduler completed successfully."}
 {"timestamp": "2025-12-07T06:25:24.498444Z", "level": "Plan created: 47bbc51a-2511-4fdd-b9cd-57fa9f2d19fe"}
+{"timestamp": "2025-12-07T06:42:35.852574Z", "level": "Running feasibility analysis."}
+{"timestamp": "2025-12-07T06:42:35.852574Z", "level": "Feasibility: not_feasible"}
+{"timestamp": "2025-12-07T06:42:35.853568Z", "level": "Detecting risk hotspots."}
+{"timestamp": "2025-12-07T06:42:35.853568Z", "level": "Risk detection failed: 'dict' object has no attribute 'tasks'"}
+{"timestamp": "2025-12-07T06:42:35.864293Z", "level": "Negotiation failed: Error in [D:\\Project\\Smart-Task-Planner\\src\\orchestrator.py] at line [76]\nMessage:Negotiation failed: Error in [D:\\Project\\Smart-Task-Planner\\src\\negotiation_engine.py] at line [52]\nMessage:Risk detection failed: 'dict' object has no attribute 'tasks'\nTraceback:Traceback (most recent call last):\n  File \"D:\\Project\\Smart-Task-Planner\\src\\negotiation_engine.py\", line 52, in detect_risk_hotspots\n    for t in task_reasoning_output.tasks:\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'dict' object has no attribute 'tasks'\n\nTraceback:Traceback (most recent call last):\n  File \"D:\\Project\\Smart-Task-Planner\\src\\negotiation_engine.py\", line 52, in detect_risk_hotspots\n    for t in task_reasoning_output.tasks:\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'dict' object has no attribute 'tasks'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"D:\\Project\\Smart-Task-Planner\\src\\orchestrator.py\", line 76, in negotiate\n    hotspots = self.negotiator.detect_risk_hotspots(task_out, sched_out)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Project\\Smart-Task-Planner\\src\\negotiation_engine.py\", line 87, in detect_risk_hotspots\n    raise smartTaskPlannerException(f\"Risk detection failed: {e}\")\nexpection.customExpection.smartTaskPlannerException: Error in [D:\\Project\\Smart-Task-Planner\\src\\negotiation_engine.py] at line [52]\nMessage:Risk detection failed: 'dict' object has no attribute 'tasks'\nTraceback:Traceback (most recent call last):\n  File \"D:\\Project\\Smart-Task-Planner\\src\\negotiation_engine.py\", line 52, in detect_risk_hotspots\n    for t in task_reasoning_output.tasks:\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'dict' object has no attribute 'tasks'\n\n"}
+{"timestamp": "2025-12-07T06:44:07.754383Z", "level": "Running feasibility analysis."}
+{"timestamp": "2025-12-07T06:44:07.755383Z", "level": "Feasibility: not_feasible"}
+{"timestamp": "2025-12-07T06:44:07.756378Z", "level": "Detecting risk hotspots."}
+{"timestamp": "2025-12-07T06:44:07.756378Z", "level": "Risk detection failed: 'dict' object has no attribute 'tasks'"}
+{"timestamp": "2025-12-07T06:44:07.760818Z", "level": "Negotiation failed: Error in [D:\\Project\\Smart-Task-Planner\\src\\orchestrator.py] at line [76]\nMessage:Negotiation failed: Error in [D:\\Project\\Smart-Task-Planner\\src\\negotiation_engine.py] at line [52]\nMessage:Risk detection failed: 'dict' object has no attribute 'tasks'\nTraceback:Traceback (most recent call last):\n  File \"D:\\Project\\Smart-Task-Planner\\src\\negotiation_engine.py\", line 52, in detect_risk_hotspots\n    for t in task_reasoning_output.tasks:\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'dict' object has no attribute 'tasks'\n\nTraceback:Traceback (most recent call last):\n  File \"D:\\Project\\Smart-Task-Planner\\src\\negotiation_engine.py\", line 52, in detect_risk_hotspots\n    for t in task_reasoning_output.tasks:\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'dict' object has no attribute 'tasks'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"D:\\Project\\Smart-Task-Planner\\src\\orchestrator.py\", line 76, in negotiate\n    hotspots = self.negotiator.detect_risk_hotspots(task_out, sched_out)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Project\\Smart-Task-Planner\\src\\negotiation_engine.py\", line 87, in detect_risk_hotspots\n    raise smartTaskPlannerException(f\"Risk detection failed: {e}\")\nexpection.customExpection.smartTaskPlannerException: Error in [D:\\Project\\Smart-Task-Planner\\src\\negotiation_engine.py] at line [52]\nMessage:Risk detection failed: 'dict' object has no attribute 'tasks'\nTraceback:Traceback (most recent call last):\n  File \"D:\\Project\\Smart-Task-Planner\\src\\negotiation_engine.py\", line 52, in detect_risk_hotspots\n    for t in task_reasoning_output.tasks:\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'dict' object has no attribute 'tasks'\n\n"}
+{"timestamp": "2025-12-07T06:45:22.119752Z", "level": "Running TaskReasoning for goal."}
+{"timestamp": "2025-12-07T06:45:22.124848Z", "level": "Prompt for task reasoning generated."}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{"timestamp": "2025-12-07T06:45:27.091711Z", "level": "Task reasoning completed successfully."}
+{"timestamp": "2025-12-07T06:45:27.091711Z", "level": "Running PERTScheduler."}
+{"timestamp": "2025-12-07T06:45:27.094711Z", "level": "Initializing PERTScheduler..."}
+{"timestamp": "2025-12-07T06:45:27.102314Z", "level": "Performing topological sort..."}
+{"timestamp": "2025-12-07T06:45:27.103316Z", "level": "Topological sort completed: ['T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'T8', 'T9', 'T10']"}
+{"timestamp": "2025-12-07T06:45:27.104310Z", "level": "PERTScheduler initialized successfully."}
+{"timestamp": "2025-12-07T06:45:27.106311Z", "level": "Running PERTScheduler..."}
+{"timestamp": "2025-12-07T06:45:27.107318Z", "level": "Computing forward pass..."}
+{"timestamp": "2025-12-07T06:45:27.107907Z", "level": "Forward pass completed."}
+{"timestamp": "2025-12-07T06:45:27.108431Z", "level": "Computing backward pass..."}
+{"timestamp": "2025-12-07T06:45:27.108431Z", "level": "Backward pass completed."}
+{"timestamp": "2025-12-07T06:45:27.109995Z", "level": "Converting offsets to calendar dates..."}
+{"timestamp": "2025-12-07T06:45:27.112083Z", "level": "Calendar mapping completed."}
+{"timestamp": "2025-12-07T06:45:27.112083Z", "level": "Running Monte Carlo simulation..."}
+{"timestamp": "2025-12-07T06:45:28.190769Z", "level": "Monte Carlo simulation completed."}
+{"timestamp": "2025-12-07T06:45:28.191771Z", "level": "PERTScheduler completed successfully."}
+{"timestamp": "2025-12-07T06:45:28.193288Z", "level": "Plan created: 234c6514-7873-4e06-a570-988e364d4b7c"}
+{"timestamp": "2025-12-07T06:52:20.540232Z", "level": "Running TaskReasoning for goal."}
+{"timestamp": "2025-12-07T06:52:20.544876Z", "level": "Prompt for task reasoning generated."}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{"timestamp": "2025-12-07T06:52:26.657372Z", "level": "Task reasoning completed successfully."}
+{"timestamp": "2025-12-07T06:52:26.657372Z", "level": "Running PERTScheduler."}
+{"timestamp": "2025-12-07T06:52:26.662378Z", "level": "Initializing PERTScheduler..."}
+{"timestamp": "2025-12-07T06:52:26.665368Z", "level": "Performing topological sort..."}
+{"timestamp": "2025-12-07T06:52:26.665368Z", "level": "Topological sort completed: ['T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'T8', 'T9', 'T10']"}
+{"timestamp": "2025-12-07T06:52:26.666380Z", "level": "PERTScheduler initialized successfully."}
+{"timestamp": "2025-12-07T06:52:26.667376Z", "level": "Running PERTScheduler..."}
+{"timestamp": "2025-12-07T06:52:26.667376Z", "level": "Computing forward pass..."}
+{"timestamp": "2025-12-07T06:52:26.668378Z", "level": "Forward pass completed."}
+{"timestamp": "2025-12-07T06:52:26.669375Z", "level": "Computing backward pass..."}
+{"timestamp": "2025-12-07T06:52:26.671375Z", "level": "Backward pass completed."}
+{"timestamp": "2025-12-07T06:52:26.672379Z", "level": "Converting offsets to calendar dates..."}
+{"timestamp": "2025-12-07T06:52:26.672379Z", "level": "Calendar mapping completed."}
+{"timestamp": "2025-12-07T06:52:26.674302Z", "level": "Running Monte Carlo simulation..."}
+{"timestamp": "2025-12-07T06:52:26.894821Z", "level": "Monte Carlo simulation completed."}
+{"timestamp": "2025-12-07T06:52:26.897828Z", "level": "PERTScheduler completed successfully."}
+{"timestamp": "2025-12-07T06:52:26.897828Z", "level": "Plan created: 19a3528d-6659-48a3-9017-61b094f4917c"}
